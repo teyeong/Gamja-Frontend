@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './styles/common.css';
+import './scss/main.scss';
 import MainPage from './pages/MainPage';
 import Layout from './components/_common/layout/Layout';
 import { RecoilRoot } from 'recoil';
