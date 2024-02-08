@@ -1,6 +1,4 @@
 /* responsive web setting */
-$mobile: 785px;
-
 @mixin mobile {
   @media (max-width: $mobile) {
     @content;
@@ -11,4 +9,16 @@ $mobile: 785px;
   @media (min-width: ($mobile + 1)) {
     @content;
   }
+}
+
+/* button common css */
+@mixin btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  @content;
 }
