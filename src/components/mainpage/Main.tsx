@@ -1,4 +1,5 @@
+import Title from 'components/_common/Title';
 const Main = () => {
-  return <></>;
+  return <Title />;
 };
 export default Main;
