@@ -1,0 +1,14 @@
+/* responsive web setting */
+$mobile: 785px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: ($mobile + 1)) {
+    @content;
+  }
+}
