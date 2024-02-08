@@ -1,6 +1,6 @@
-import NavBar from './NavBar';
 import Footer from './Footer';
 import React from 'react';
+import Header from './Header';
 
 type MyComponentProps = {
   children: React.ReactNode;
@@ -9,9 +9,8 @@ type MyComponentProps = {
 const Layout = ({ children }: MyComponentProps) => {
   return (
     <div>
-      <NavBar />
+      <Header />
       {children}
-      안녕하세요
       <Footer />
     </div>
   );
