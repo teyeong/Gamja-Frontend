@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  @include mobile {
+    height: 10rem;
+  }
+  @include pc {
+    height: 15rem;
+  }
+  background-color: $pale-gray;
+}
+
+.footer_txt {
+  width: max-content;
+  @include mobile {
+    height: 1.6rem;
+    font-size: 0.9rem;
+    margin-left: 2.4rem;
+  }
+  @include pc {
+    height: 2.4rem;
+    font-size: 1.6rem;
+    margin-left: 7.6rem;
+  }
+}
