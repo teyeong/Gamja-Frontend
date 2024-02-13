@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './scss/main.scss';
-import MainPage from './pages/MainPage';
 import Layout from './components/_common/layout/Layout';
 import { RecoilRoot } from 'recoil';
+
+import MainPage from './pages/MainPage';
+import SignInPage from 'pages/SignInPage';
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
           <Routes>
             {/* 메인 페이지 */}
             <Route path="/" element={<MainPage />} />
+            <Route path="/sign-in" element={<SignInPage />} />
           </Routes>
         </Layout>
       </RecoilRoot>
