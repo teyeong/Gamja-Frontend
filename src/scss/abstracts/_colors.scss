@@ -1,0 +1,13 @@
+@import './variables';
+
+/* button colors*/
+.green {
+  background-color: $dark-green;
+  color: $white;
+}
+
+.white {
+  background-color: $white;
+  color: $dark-green;
+  border: 0.1rem solid $light-gray;
+}

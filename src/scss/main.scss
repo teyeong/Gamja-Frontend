@@ -1,11 +1,14 @@
-@import 'abstracts/variables';
+@import 'abstracts/colors';
 @import 'abstracts/mixin';
+@import 'abstracts/variables';
 
 @import 'base/reset';
 
 @import 'components/button';
+@import 'components/input';
 @import 'components/title';
 
-@import 'layout/header';
 @import 'layout/footer';
+@import 'layout/header';
+
 @import 'pages/home';
