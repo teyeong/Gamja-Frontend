@@ -53,8 +53,9 @@
 
 .input-label-box {
   display: flex;
-  align-items: center;
   p {
+    display: flex;
+    align-items: center;
     font-weight: 600;
     width: max-content;
     @include pc {
