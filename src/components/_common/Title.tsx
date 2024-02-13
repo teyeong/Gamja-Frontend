@@ -1,7 +1,8 @@
 import React from 'react';
+import { TitleProps } from './Title.d';
 
-const Title = () => {
-  return <div className="title">메인 페이지</div>;
+const Title = ({ label }: TitleProps) => {
+  return <div className="title">{label}</div>;
 };
 
 export default Title;
