@@ -1,11 +1,11 @@
 import Title from 'components/_common/Title';
-import Main from 'components/mainpage/Main';
+import Contents from 'components/mainpage/Contents';
 
 const MainPage = () => {
   return (
     <>
       <Title label="메인 페이지" />
-      <Main />
+      <Contents />
     </>
   );
 };
