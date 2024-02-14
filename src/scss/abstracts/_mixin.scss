@@ -13,6 +13,19 @@
   }
 }
 
+/* mainpage content responsive web setting */
+@mixin main-mobile {
+  @media (max-width: $main-breakpoint) {
+    @content;
+  }
+}
+
+@mixin main-pc {
+  @media (min-width: ($main-breakpoint + 1)) {
+    @content;
+  }
+}
+
 /* button common css */
 @mixin btn {
   display: flex;

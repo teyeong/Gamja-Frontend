@@ -4,6 +4,7 @@
 
 @import 'base/reset';
 
+@import 'components/arrow';
 @import 'components/button';
 @import 'components/input';
 @import 'components/title';
@@ -11,5 +12,5 @@
 @import 'layout/footer';
 @import 'layout/header';
 
-@import 'pages/home';
+@import 'pages/main';
 @import 'pages/signin';

@@ -1,13 +1,23 @@
 @import './variables';
 
-/* button colors*/
+/* colors css */
 .dark-green {
   background-color: $dark-green;
   color: $white;
+}
+
+.green {
+  background-color: $green;
+  color: $black;
 }
 
 .white {
   background-color: $white;
   color: $dark-green;
   border: 0.1rem solid $light-gray;
+}
+
+.dark-blue {
+  background-color: $dark-blue;
+  color: $white;
 }
