@@ -28,7 +28,7 @@ const SignInForm = ({ user }: SignInFormProps) => {
         <Btn
           label="로그인"
           onClick={handleSubmit}
-          styleClass="green long-btn"
+          styleClass="dark-green long-btn"
         />
         <div className="siginin-btn-blank"></div>
         <Btn
