@@ -1,4 +1,4 @@
-import { ContentProps } from './Content.d';
+import { ContentProps } from 'props-type';
 
 const Content = ({
   svg,
