@@ -1,0 +1,58 @@
+@import '../abstracts/mixin';
+
+/* default info */
+.info-div {
+  @include pc {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* defaultResume  */
+.defaultResume-div {
+  @include pc {
+    display: flex;
+    flex-direction: column;
+    .temp-resume {
+      width: 37.8rem;
+      height: 23.8rem;
+      border-radius: 1rem;
+      font-size: 3.2rem;
+    }
+  }
+}
+
+/* common style */
+.mypage-div {
+  display: flex;
+  @include pc {
+    justify-content: center;
+    margin-bottom: 8rem;
+    .mypage-small-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 3rem;
+    }
+  }
+}
+
+.mypage-title {
+  cursor: default;
+  @include pc {
+    font-size: 3.6rem;
+    font-weight: 500;
+  }
+}
+
+.mypage-flexdiv {
+  * {
+    margin: 0;
+  }
+  @include pc {
+    width: 37.8rem;
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+  }
+}

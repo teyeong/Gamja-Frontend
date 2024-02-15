@@ -5,6 +5,7 @@ import { RecoilRoot } from 'recoil';
 
 import MainPage from './pages/MainPage';
 import SignInPage from 'pages/SignInPage';
+import MyPage from 'pages/MyPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             {/* 메인 페이지 */}
             <Route path="/" element={<MainPage />} />
             <Route path="/sign-in" element={<SignInPage />} />
+            <Route path="/my-page" element={<MyPage />} />
           </Routes>
         </Layout>
       </RecoilRoot>
