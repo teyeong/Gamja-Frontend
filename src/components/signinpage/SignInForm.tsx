@@ -1,12 +1,9 @@
 import Btn from 'components/_common/Btn';
 import Input from 'components/_common/Input';
 import KakaoBtn from 'components/_common/KakaoBtn';
+import { UserProps } from 'props-type';
 
-type SignInFormProps = {
-  user: string;
-};
-
-const SignInForm = ({ user }: SignInFormProps) => {
+const SignInForm = ({ user }: UserProps) => {
   const handleSubmit = () => {
     if (user === 'senior') {
       console.log('시니어 회원 로그인');
