@@ -1,5 +1,6 @@
 import Btn from 'components/_common/Btn';
 import Input from 'components/_common/Input';
+import KakaoBtn from 'components/_common/KakaoBtn';
 
 type SignInFormProps = {
   user: string;
@@ -30,12 +31,7 @@ const SignInForm = ({ user }: SignInFormProps) => {
           onClick={handleSubmit}
           styleClass="dark-green long-btn"
         />
-        <div className="siginin-btn-blank"></div>
-        <Btn
-          label="카카오 로그인"
-          onClick={handleSubmit}
-          styleClass="white long-btn"
-        />
+        <KakaoBtn />
       </div>
       <div className="signin-mini-btns">
         <button>아이디 찾기</button>
