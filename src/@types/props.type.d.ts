@@ -32,7 +32,7 @@ declare module 'props-type' {
     src?: string;
   };
 
-  // UserTag, SignInForm props
+  // UserTag, SignInForm, TypeContent props
   export type UserProps = {
     user: string;
   };
