@@ -1,31 +1,15 @@
+@import '../abstracts/mixin';
 @import '../abstracts/variables';
 
-.arrow {
-  margin-left: 2rem;
-  p {
-    position: relative;
-    display: inline-block;
-    width: 1.5rem;
-    height: 3rem;
-    overflow: hidden;
-    vertical-align: middle;
-  }
-
-  .black-arrow::before {
-    border-top: 0.2rem solid $black;
-    border-left: 0.2rem solid $black;
-  }
-
-  p::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    -webkit-transform: translate(-50%, -50%) rotate(45deg);
-    transform: translate(-50%, -50%) rotate(45deg);
-    transform: translate(-50%, -50%) rotate(135deg);
-    border-top: 0.2rem solid $white;
-    border-left: 0.2rem solid $white;
+.small-arrow {
+  @include arrow {
+    p {
+      width: 1.5rem;
+      height: 3rem;
+      &::before {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
   }
 }

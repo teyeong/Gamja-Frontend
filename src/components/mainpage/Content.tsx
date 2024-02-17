@@ -16,7 +16,7 @@ const Content = ({
       </div>
       <div className="content-box">
         <p>{content}</p>
-        <div className="arrow">
+        <div className="small-arrow">
           <p className={`${styleClass === 'green' && 'black-arrow'}`}></p>
         </div>
       </div>
