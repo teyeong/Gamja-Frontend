@@ -60,3 +60,33 @@
   }
   @content;
 }
+
+/* arrow style */
+@mixin arrow {
+  margin-left: 2rem;
+
+  p {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(135deg);
+      border-top: 0.2rem solid $white;
+      border-left: 0.2rem solid $white;
+    }
+  }
+
+  .black-arrow::before {
+    border-top: 0.2rem solid $black;
+    border-left: 0.2rem solid $black;
+  }
+
+  @content;
+}
