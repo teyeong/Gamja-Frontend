@@ -1,0 +1,22 @@
+@import '../abstracts/mixin';
+
+/* Verification style */
+.signup-veri-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div:last-child {
+    margin-top: 2rem;
+    margin-bottom: 25rem;
+  }
+}
+
+/* text style for Verification & Complete Component */
+.signup-text {
+  font-weight: 500;
+  text-align: center;
+  @include pc {
+    font-size: 3.2rem;
+    margin-bottom: 8rem;
+  }
+}

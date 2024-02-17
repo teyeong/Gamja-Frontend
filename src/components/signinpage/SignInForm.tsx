@@ -3,13 +3,22 @@ import Input from 'components/_common/Input';
 import KakaoBtn from 'components/_common/KakaoBtn';
 import { UserProps } from 'props-type';
 
+import { useNavigate } from 'react-router-dom';
+
 const SignInForm = ({ user }: UserProps) => {
+  const navigate = useNavigate();
+
   const handleSubmit = () => {
     if (user === 'senior') {
       console.log('시니어 회원 로그인');
     } else if (user === 'company') {
       console.log('기업 회원 로그인');
     }
+  };
+
+  // mini btns click event handler
+  const handleBtnClick = (path: string) => {
+    navigate(path);
   };
 
   return (
@@ -35,7 +44,12 @@ const SignInForm = ({ user }: UserProps) => {
         <div className="line"></div>
         <button>비밀번호 찾기</button>
         <div className="line"></div>
-        <button className="signup">회원가입</button>
+        <button
+          className="signup"
+          onClick={() => handleBtnClick('/sign-up/verification')}
+        >
+          회원가입
+        </button>
       </div>
     </div>
   );
