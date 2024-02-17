@@ -1,7 +1,11 @@
 import Btn from 'components/_common/Btn';
 import KakaoBtn from 'components/_common/KakaoBtn';
 
+import { useNavigate } from 'react-router-dom';
+
 const Verification = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="signup-veri-div">
       <p className="signup-text">
@@ -13,7 +17,7 @@ const Verification = () => {
       </p>
       <Btn
         label="휴대폰 본인 인증"
-        onClick={() => (window.location.href = '/sign-up/user-type')}
+        onClick={() => navigate('/sign-up/user-type')}
         styleClass="long-btn dark-green"
       />
       <KakaoBtn />
