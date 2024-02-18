@@ -22,9 +22,7 @@ const TypeContent = ({ user }: UserProps) => {
     <div className={`${color} signup-type-div`}>
       <div>
         <p>{user} 회원가입</p>
-        <div className="big-arrow">
-          <p></p>
-        </div>
+        <div className="big-arrow"></div>
       </div>
       <img src={imgSrc} />
     </div>
