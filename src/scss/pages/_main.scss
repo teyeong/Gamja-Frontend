@@ -2,6 +2,11 @@
 
 .main-div {
   display: flex;
+  flex-direction: column;
+}
+
+.button-div {
+  display: flex;
   justify-content: center;
   @include main-pc {
     margin: 8rem 0;
