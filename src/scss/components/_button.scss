@@ -80,3 +80,12 @@
     }
   }
 }
+
+.row-btn {
+  @include btn;
+  @include pc {
+    width: 37.8rem;
+    height: 6rem;
+    font-size: 2.8rem;
+  }
+}

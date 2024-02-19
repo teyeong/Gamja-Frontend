@@ -29,3 +29,43 @@
     }
   }
 }
+
+.up-arrow {
+  @include arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+    &::after {
+      top: 25%;
+      border: none;
+      border-left: 0.3rem solid $gray;
+      border-top: 0.3rem solid $gray;
+    }
+  }
+}
+
+.down-arrow {
+  @include arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+    &::after {
+      top: -25%;
+      border: none;
+      border-right: 0.3rem solid $gray;
+      border-bottom: 0.3rem solid $gray;
+    }
+  }
+}
+
+.check-arrow {
+  @include arrow {
+    margin-left: 1.7rem;
+    width: 1.2rem;
+    height: 3rem;
+    &::after {
+      top: -20%;
+      border: none;
+      border-right: 0.3rem solid $black;
+      border-bottom: 0.3rem solid $black;
+    }
+  }
+}

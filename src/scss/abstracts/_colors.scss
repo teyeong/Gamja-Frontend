@@ -50,3 +50,8 @@
   color: $dark-blue;
   background-color: $pale-blue;
 }
+
+.gray {
+  background-color: $white;
+  box-shadow: 0 0 0 0.1rem $gray;
+}
