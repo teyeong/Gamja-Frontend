@@ -1,0 +1,33 @@
+@import '../abstracts/mixin';
+
+.picture-div {
+  position: relative;
+  cursor: pointer;
+  @include pc {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+.picture {
+  border-radius: 100%;
+  object-fit: cover;
+  @include pc {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.picture-icon {
+  position: absolute;
+  border-radius: 100%;
+  @include pc {
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0rem;
+    right: 0rem;
+  }
+}

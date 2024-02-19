@@ -42,3 +42,14 @@
     margin-top: 3.4rem;
   }
 }
+
+.mini-btn {
+  @include btn {
+    font-weight: 400;
+  }
+  @include pc {
+    width: 10rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+}

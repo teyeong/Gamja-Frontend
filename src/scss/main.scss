@@ -4,11 +4,18 @@
 
 @import 'base/reset';
 
+@import 'components/arrow';
 @import 'components/button';
+@import 'components/infoForm';
 @import 'components/input';
+@import 'components/picture';
+@import 'components/profile';
 @import 'components/title';
+@import 'components/usertag';
 
 @import 'layout/footer';
 @import 'layout/header';
 
-@import 'pages/home';
+@import 'pages/main';
+@import 'pages/mypage';
+@import 'pages/signin';

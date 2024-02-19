@@ -17,6 +17,27 @@
   }
 }
 
+.input-signin-div {
+  display: flex;
+  flex-direction: column;
+
+  @include input-div {
+    @include pc {
+      width: 58.2rem;
+    }
+  }
+
+  .input-label-box p {
+    @include pc {
+      font-size: 3rem;
+    }
+  }
+
+  .alert-text {
+    height: 2rem;
+  }
+}
+
 .input-wrapper {
   display: flex;
   flex-direction: column;
@@ -53,8 +74,9 @@
 
 .input-label-box {
   display: flex;
-  align-items: center;
   p {
+    display: flex;
+    align-items: center;
     font-weight: 600;
     width: max-content;
     @include pc {

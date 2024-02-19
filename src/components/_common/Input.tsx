@@ -1,4 +1,4 @@
-import { InputProps } from './Input.d';
+import { InputProps } from 'props-type';
 
 const Input = ({
   label,

@@ -1,4 +1,4 @@
-import { BtnProps } from './Btn.d';
+import { BtnProps } from 'props-type';
 
 const Btn = ({ label, styleClass, onClick }: BtnProps) => {
   return (

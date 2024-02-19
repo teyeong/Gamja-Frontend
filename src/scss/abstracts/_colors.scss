@@ -1,13 +1,47 @@
 @import './variables';
 
-/* button colors*/
-.green {
+/* button and content colors */
+.dark-green {
   background-color: $dark-green;
   color: $white;
+}
+
+.green {
+  background-color: $green;
+  color: $black;
 }
 
 .white {
   background-color: $white;
   color: $dark-green;
-  border: 0.1rem solid $light-gray;
+  box-shadow: 0 0 0 0.1rem $light-gray;
+}
+
+.dark-blue {
+  background-color: $dark-blue;
+  color: $white;
+}
+
+/* mini button colors */
+.light-gray {
+  background-color: $white;
+  color: $black;
+  box-shadow: 0 0 0 0.1rem $light-gray;
+}
+
+.red {
+  background-color: $white;
+  color: $red;
+  box-shadow: 0 0 0 0.1rem $light-gray;
+}
+
+/* tag colors */
+.green-tag {
+  color: $dark-green;
+  background-color: $pale-green;
+}
+
+.blue-tag {
+  color: $dark-blue;
+  background-color: $pale-blue;
 }
