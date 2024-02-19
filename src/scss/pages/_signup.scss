@@ -1,0 +1,178 @@
+@import '../abstracts/colors';
+@import '../abstracts/mixin';
+
+/* Verification style */
+.signup-veri-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div:last-child {
+    margin-top: 2rem;
+    margin-bottom: 25rem;
+  }
+}
+
+/* text style for Verification & Complete Component */
+.signup-text {
+  font-weight: 500;
+  text-align: center;
+  @include pc {
+    font-size: 3.2rem;
+    margin-bottom: 8rem;
+  }
+}
+
+/* UserType style */
+.signup-type-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  @include pc {
+    width: 50.2rem;
+    height: 15rem;
+    padding: 0 4rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+
+.signup-usertype-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @include pc {
+    height: 35rem;
+    margin-bottom: 21rem;
+  }
+}
+
+/* Form style */
+.signup-form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .inputs-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.btns-div {
+  display: flex;
+  justify-content: space-between;
+  @include pc {
+    width: 78.6rem;
+    margin-bottom: 8rem;
+  }
+}
+
+/* Terms style */
+.terms-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include pc {
+    margin-bottom: 3rem;
+  }
+}
+
+.terms-title-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $light-green;
+  padding: 0 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  p {
+    font-weight: 600;
+  }
+
+  @include pc {
+    width: 74.6rem;
+    height: 7.6rem;
+
+    p {
+      font-size: 3.2rem;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: 500;
+      color: $gray;
+    }
+    @include pc {
+      p {
+        font-size: 2.4rem;
+        margin-left: 1.6rem;
+      }
+    }
+  }
+}
+
+.terms-text {
+  @include pc {
+    width: 76.6rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+.terms-check-div {
+  display: flex;
+  justify-content: end;
+  width: 78.6rem;
+  .checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    p {
+      margin-left: 1rem;
+    }
+  }
+
+  @include pc {
+    .checkbox:first-child {
+      margin-right: 3rem;
+    }
+    p {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  @include pc {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+
+/* Complete style */
+.signup-comp-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 36.4rem;
+}

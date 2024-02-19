@@ -49,8 +49,8 @@
 
   .signin-btn-wrapper {
     margin-top: 1rem;
-    .siginin-btn-blank {
-      height: 2rem;
+    div:last-child {
+      margin-top: 2rem;
     }
   }
 }

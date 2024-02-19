@@ -7,7 +7,7 @@ declare module 'props-type' {
 
   export type InputProps = {
     label: string;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     isRequired?: boolean;
     styleClass?: string;
     isWrong?: boolean;
@@ -32,7 +32,8 @@ declare module 'props-type' {
     src?: string;
   };
 
-  export type UserTagProps = {
+  // UserTag, SignInForm, TypeContent props
+  export type UserProps = {
     user: string;
   };
 }
