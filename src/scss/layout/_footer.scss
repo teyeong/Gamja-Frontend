@@ -10,6 +10,8 @@
     height: 15rem;
   }
   background-color: $pale-gray;
+  position: relative;
+  transform: translateY(0%);
 }
 
 .footer_txt {
@@ -23,5 +25,15 @@
     height: 2.4rem;
     font-size: 1.6rem;
     margin-left: 7.6rem;
+  }
+}
+
+.wrapper {
+  height: auto;
+  @include mobile {
+    min-height: calc(100vh - 10rem);
+  }
+  @include pc {
+    min-height: calc(100vh - 15rem);
   }
 }

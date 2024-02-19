@@ -8,11 +8,13 @@ type MyComponentProps = {
 
 const Layout = ({ children }: MyComponentProps) => {
   return (
-    <div>
-      <Header />
-      {children}
+    <>
+      <div className="wrapper">
+        <Header />
+        {children}
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
