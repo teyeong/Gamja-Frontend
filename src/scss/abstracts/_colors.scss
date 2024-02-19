@@ -22,6 +22,11 @@
   color: $white;
 }
 
+.kakao-color {
+  background-color: $kakao-bg;
+  color: $kakao-label;
+}
+
 /* mini button colors */
 .light-gray {
   background-color: $white;
@@ -44,4 +49,9 @@
 .blue-tag {
   color: $dark-blue;
   background-color: $pale-blue;
+}
+
+.gray {
+  background-color: $white;
+  box-shadow: 0 0 0 0.1rem $gray;
 }

@@ -1,7 +1,7 @@
-import { UserTagProps } from 'props-type';
+import { UserProps } from 'props-type';
 import { useEffect, useState } from 'react';
 
-const UserTag = ({ user }: UserTagProps) => {
+const UserTag = ({ user }: UserProps) => {
   const [tag, setTag] = useState('');
 
   useEffect(() => {

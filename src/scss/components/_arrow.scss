@@ -1,31 +1,71 @@
+@import '../abstracts/mixin';
 @import '../abstracts/variables';
 
-.arrow {
-  margin-left: 2rem;
-  p {
-    position: relative;
-    display: inline-block;
-    width: 1.5rem;
+.small-arrow {
+  @include arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.big-arrow {
+  @include arrow {
+    width: 1.7rem;
+    height: 1.7rem;
+    &::after {
+      border-top: 0.3rem solid $white;
+      border-right: 0.3rem solid $white;
+    }
+  }
+}
+
+.black-arrow {
+  @include arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+    &::after {
+      border-top: 0.2rem solid $black;
+      border-right: 0.2rem solid $black;
+    }
+  }
+}
+
+.up-arrow {
+  @include arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+    &::after {
+      top: 25%;
+      border: none;
+      border-left: 0.3rem solid $gray;
+      border-top: 0.3rem solid $gray;
+    }
+  }
+}
+
+.down-arrow {
+  @include arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+    &::after {
+      top: -25%;
+      border: none;
+      border-right: 0.3rem solid $gray;
+      border-bottom: 0.3rem solid $gray;
+    }
+  }
+}
+
+.check-arrow {
+  @include arrow {
+    margin-left: 1.7rem;
+    width: 1.2rem;
     height: 3rem;
-    overflow: hidden;
-    vertical-align: middle;
-  }
-
-  .black-arrow::before {
-    border-top: 0.2rem solid $black;
-    border-left: 0.2rem solid $black;
-  }
-
-  p::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    -webkit-transform: translate(-50%, -50%) rotate(45deg);
-    transform: translate(-50%, -50%) rotate(45deg);
-    transform: translate(-50%, -50%) rotate(135deg);
-    border-top: 0.2rem solid $white;
-    border-left: 0.2rem solid $white;
+    &::after {
+      top: -20%;
+      border: none;
+      border-right: 0.3rem solid $black;
+      border-bottom: 0.3rem solid $black;
+    }
   }
 }

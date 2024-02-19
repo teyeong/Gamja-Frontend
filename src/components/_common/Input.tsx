@@ -19,7 +19,7 @@ const Input = ({
         </div>
         <div className={`input-box ${isWrong && 'input-red'}`}>
           {content ? (
-            <input className="input" disabled value={content} />
+            <input className="input" disabled defaultValue={content} />
           ) : (
             <input className="input" onChange={onChange} type={type} />
           )}
