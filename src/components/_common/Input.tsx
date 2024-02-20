@@ -9,6 +9,7 @@ const Input = ({
   alertText = '',
   content = '',
   type = 'text',
+  placehoder,
 }: InputProps) => {
   return (
     <>
@@ -21,7 +22,12 @@ const Input = ({
           {content ? (
             <input className="input" disabled defaultValue={content} />
           ) : (
-            <input className="input" onChange={onChange} type={type} />
+            <input
+              className="input"
+              onChange={onChange}
+              type={type}
+              placeholder={placehoder}
+            />
           )}
           <p className="alert-text">{alertText}</p>
         </div>

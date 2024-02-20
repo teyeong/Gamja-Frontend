@@ -14,6 +14,7 @@ declare module 'props-type' {
     alertText?: string;
     content?: string;
     type?: string;
+    placehoder?: string;
   };
 
   export type ContentProps = {
