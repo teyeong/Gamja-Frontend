@@ -9,7 +9,7 @@ const Input = ({
   alertText = '',
   content = '',
   type = 'text',
-  placehoder,
+  placeholder,
 }: InputProps) => {
   return (
     <>
@@ -26,7 +26,7 @@ const Input = ({
               className="input"
               onChange={onChange}
               type={type}
-              placeholder={placehoder}
+              placeholder={placeholder}
             />
           )}
           <p className="alert-text">{alertText}</p>

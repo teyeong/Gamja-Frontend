@@ -19,7 +19,7 @@ const InfoEdit = () => {
               <Input
                 label="연락처"
                 styleClass="phone-input phone-num"
-                placehoder="전화번호 입력"
+                placeholder="전화번호 입력"
               />
               <Btn
                 label="인증번호 받기"
@@ -31,7 +31,7 @@ const InfoEdit = () => {
               <Input
                 label=""
                 styleClass="phone-input"
-                placehoder="인증번호 입력"
+                placeholder="인증번호 입력"
               />
               <Btn
                 label="수정 완료"
