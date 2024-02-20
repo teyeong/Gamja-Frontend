@@ -74,12 +74,12 @@ const CompanyForm = () => {
         <Btn
           label="취소"
           onClick={() => (window.location.href = '/sign-up/user-type')}
-          styleClass="row-btn white"
+          styleClass="abreast-btn white"
         />
         <Btn
           label="회원가입"
           onClick={() => (window.location.href = '/sign-up/complete')}
-          styleClass="row-btn dark-green"
+          styleClass="abreast-btn dark-green"
         />
       </div>
     </div>
