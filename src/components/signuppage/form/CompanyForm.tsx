@@ -1,10 +1,10 @@
 import Terms from './Terms';
 import Input from 'components/_common/Input';
 import Btn from 'components/_common/Btn';
-
 import mockUser from '../../../assets/mock/info.json';
-import { useEffect, useState } from 'react';
 import { InfoFormData } from 'data-type';
+
+import { useEffect, useState } from 'react';
 
 const CompanyForm = () => {
   const [data, setData] = useState<Partial<InfoFormData>>({});
@@ -35,7 +35,7 @@ const CompanyForm = () => {
     <div className="signup-form-div">
       <Terms />
       <div className="input-div inputs-div">
-        <Input label="이름" content={data.name || ''} />
+        <Input label="이름" content={data.name} disabled={true} />
         <div className="input-div">
           <Input
             label="아이디"
@@ -67,7 +67,7 @@ const CompanyForm = () => {
           onChange={(e) => setComNum(e.target.value)}
           isRequired={true}
         />
-        <Input label="전화번호" content={data.phone || ''} />
+        <Input label="전화번호" content={data.phone} disabled={true} />
         <Input label="이메일" onChange={(e) => setEmail(e.target.value)} />
       </div>
       <div className="btns-div">

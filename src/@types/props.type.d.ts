@@ -15,6 +15,7 @@ declare module 'props-type' {
     content?: string;
     type?: string;
     placeholder?: string;
+    disabled?: boolean;
   };
 
   export type ContentProps = {

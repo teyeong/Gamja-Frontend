@@ -10,6 +10,7 @@ const Input = ({
   content = '',
   type = 'text',
   placeholder,
+  disabled = false,
 }: InputProps) => {
   return (
     <>
@@ -19,14 +20,21 @@ const Input = ({
           {isRequired && <p className="required">*</p>}
         </div>
         <div className={`input-box ${isWrong && 'input-red'}`}>
-          {content ? (
-            <input className="input" disabled defaultValue={content} />
+          {disabled ? (
+            <input
+              name={label}
+              className="input"
+              disabled
+              defaultValue={content}
+            />
           ) : (
             <input
+              name={label}
               className="input"
               onChange={onChange}
               type={type}
               placeholder={placeholder}
+              defaultValue={content}
             />
           )}
           <p className="alert-text">{alertText}</p>
