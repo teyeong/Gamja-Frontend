@@ -12,6 +12,7 @@ import UserType from 'components/signuppage/usertype/UserType';
 import Complete from 'components/signuppage/complete/Complete';
 import SeniorForm from 'components/signuppage/form/SeniorForm';
 import CompanyForm from 'components/signuppage/form/CompanyForm';
+import InfoEditPage from 'pages/InfoEditPage';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route path="complete" element={<Complete />} />
             </Route>
             <Route path="/my-page" element={<MyPage />} />
+            <Route path="/my-page/edit" element={<InfoEditPage />} />
           </Routes>
         </Layout>
       </RecoilRoot>

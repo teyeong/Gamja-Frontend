@@ -1,0 +1,19 @@
+@import '../abstracts/colors';
+@import '../abstracts/mixin';
+
+.indoedit-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .inputs-div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    @include pc {
+      padding: 4rem;
+      padding-bottom: 0;
+      margin-bottom: 6rem;
+      box-shadow: 0 0 0 0.1rem $light-gray;
+    }
+  }
+}
