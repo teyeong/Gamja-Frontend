@@ -33,7 +33,7 @@ const Header = () => {
               이력서 관리
             </div>
             <div className="header_txt" onClick={() => navigate('/search')}>
-              인재풀
+              인재풀 조회
             </div>
           </div>
           {isLogin ? (

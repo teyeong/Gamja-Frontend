@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 import Content from './Content';
-import Banner from './Banner';
 
 import computer from '../../assets/icons/computer.svg';
 import folder from '../../assets/icons/folder.svg';
@@ -9,8 +8,7 @@ import zoom from '../../assets/icons/zoom.svg';
 
 const Contents = () => {
   return (
-    <div className="main-div">
-      <Banner />
+    <>
       <div className="button-div">
         <div className="contents-wrapper">
           <Link to="/about-us">
@@ -40,7 +38,7 @@ const Contents = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Contents;
