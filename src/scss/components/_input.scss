@@ -4,7 +4,23 @@
 .row-input-div {
   @include input-div {
     @include pc {
-      width: 72.6rem;
+      width: 70.6rem;
+    }
+  }
+}
+
+.phone-input-div {
+  @include input-div {
+    @include pc {
+      width: 66.6rem;
+    }
+  }
+}
+
+.cert-input-div {
+  @include input-div {
+    @include pc {
+      width: 52.2rem;
     }
   }
 }
@@ -42,6 +58,38 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+/* activated phone number edit form style  */
+.phone-input {
+  @include pc {
+    flex-direction: row;
+    width: 66.6rem;
+    justify-content: space-between;
+    &.phone-num .alert-text {
+      height: 2rem;
+    }
+  }
+  .input-label-box {
+    width: 16.4rem;
+    p {
+      @include pc {
+        width: 16.4rem;
+        height: 6rem;
+        font-size: 2.4rem;
+      }
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+  }
+  .input {
+    @include pc {
+      margin: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
 
 .row {
