@@ -1,4 +1,8 @@
 declare module 'props-type' {
+  export type ChildrenProps = {
+    children: React.ReactNode;
+  };
+
   export type BtnProps = {
     label: string;
     styleClass: string;
