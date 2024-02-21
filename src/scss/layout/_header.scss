@@ -27,6 +27,9 @@
 .header_txt_container {
   display: flex;
   gap: 7.5vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .header_txt {
