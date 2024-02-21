@@ -5,9 +5,11 @@
   width: 100%;
   @include mobile {
     height: 10rem;
+    margin-top: 4rem;
   }
   @include pc {
     height: 15rem;
+    margin-top: 8rem;
   }
   background-color: $pale-gray;
   position: relative;
