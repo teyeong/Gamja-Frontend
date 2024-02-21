@@ -1,0 +1,64 @@
+.banner-div {
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include pc {
+    width: 70.6rem;
+    height: 15rem;
+    padding: 0rem 4rem;
+    align-items: center;
+    img {
+      height: 12rem;
+    }
+  }
+  @include mobile {
+    min-width: 30.2rem;
+    width: calc(100vw - 8.8rem);
+    height: 10rem;
+    padding: 0rem 2rem;
+    img {
+      height: 8rem;
+    }
+  }
+}
+
+.banner-title {
+  font-weight: 700;
+  @include pc {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    img {
+      height: 3.6rem;
+    }
+  }
+  @include mobile {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    img {
+      height: 2.6rem;
+    }
+  }
+}
+
+.banner-contents {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @include pc {
+    font-size: 2rem;
+    font-weight: 500;
+    img {
+      height: 2rem;
+    }
+  }
+  @include mobile {
+    font-size: 1.4rem;
+    font-weight: 500;
+    img {
+      height: 1.4rem;
+    }
+  }
+}

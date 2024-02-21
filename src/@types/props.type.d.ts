@@ -38,4 +38,15 @@ declare module 'props-type' {
   export type UserProps = {
     user: string;
   };
+
+  export type ResumeCardProps = {
+    isDefault?: boolean;
+    title: string;
+    jobName: string;
+    date: string;
+    workType: string[];
+    commuteType: string;
+    isVerified?: boolean;
+    resumeId: number;
+  };
 }
