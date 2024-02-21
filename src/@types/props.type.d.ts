@@ -42,4 +42,8 @@ declare module 'props-type' {
   export type UserProps = {
     user: string;
   };
+
+  export type ModalProps = {
+    setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  };
 }
