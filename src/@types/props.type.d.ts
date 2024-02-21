@@ -1,4 +1,8 @@
 declare module 'props-type' {
+  export type ChildrenProps = {
+    children: React.ReactNode;
+  };
+
   export type BtnProps = {
     label: string;
     styleClass: string;
@@ -37,5 +41,9 @@ declare module 'props-type' {
   // UserTag, SignInForm, TypeContent props
   export type UserProps = {
     user: string;
+  };
+
+  export type ModalProps = {
+    setModal: React.Dispatch<React.SetStateAction<boolean>>;
   };
 }
