@@ -20,6 +20,12 @@ declare module 'props-type' {
     type?: string;
     placeholder?: string;
     disabled?: boolean;
+    isAlertRequired?: boolean;
+  };
+
+  export type LabelProps = {
+    label: string;
+    isRequired?: boolean;
   };
 
   export type ContentProps = {
