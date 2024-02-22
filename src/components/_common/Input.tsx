@@ -11,6 +11,7 @@ const Input = ({
   type = 'text',
   placeholder,
   disabled = false,
+  isAlertRequired = true,
 }: InputProps) => {
   return (
     <>
@@ -37,7 +38,7 @@ const Input = ({
               defaultValue={content}
             />
           )}
-          <p className="alert-text">{alertText}</p>
+          {isAlertRequired && <p className="alert-text">{alertText}</p>}
         </div>
       </div>
     </>

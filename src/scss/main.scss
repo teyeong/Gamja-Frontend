@@ -12,8 +12,11 @@
 @import 'components/picture';
 @import 'components/profile';
 @import 'components/title';
-@import 'components/usertag';
+@import 'components/tag';
 @import 'components/banner';
+@import 'components/banner_btn';
+@import 'components/resume_card';
+@import 'components/select';
 
 @import 'layout/footer';
 @import 'layout/header';
@@ -23,3 +26,4 @@
 @import 'pages/mypage';
 @import 'pages/signin';
 @import 'pages/signup';
+@import 'pages/resume';

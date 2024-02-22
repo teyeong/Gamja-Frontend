@@ -20,6 +20,12 @@ declare module 'props-type' {
     type?: string;
     placeholder?: string;
     disabled?: boolean;
+    isAlertRequired?: boolean;
+  };
+
+  export type LabelProps = {
+    label: string;
+    isRequired?: boolean;
   };
 
   export type ContentProps = {
@@ -45,5 +51,27 @@ declare module 'props-type' {
 
   export type ModalProps = {
     setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  };
+
+  export type ResumeCardProps = {
+    isDefault?: boolean;
+    title: string;
+    jobName: string;
+    date: string;
+    workType: string[];
+    commuteType: string;
+    isVerified?: boolean;
+    resumeId: number;
+  };
+
+  export type RecordProps = {
+    isMini?: boolean;
+    needDetail?: boolean;
+    firstPlaceholder: string;
+    secondPlaceholder: string;
+  };
+
+  export type PaySliderProps = {
+    isHour: boolean;
   };
 }

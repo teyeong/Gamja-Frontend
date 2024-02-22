@@ -13,6 +13,8 @@ import Complete from 'components/signuppage/complete/Complete';
 import SeniorForm from 'components/signuppage/form/SeniorForm';
 import CompanyForm from 'components/signuppage/form/CompanyForm';
 import InfoEditPage from 'pages/InfoEditPage';
+import ResumeEditPage from 'pages/ResumeEditPage';
+import ResumeListPage from 'pages/ResumeListPage';
 
 function App() {
   return (
@@ -20,7 +22,6 @@ function App() {
       <RecoilRoot>
         <Layout>
           <Routes>
-            {/* 메인 페이지 */}
             <Route path="/" element={<MainPage />} />
             <Route path="/sign-in" element={<SignInPage />} />
             <Route path="/sign-up" element={<SignUpPage />}>
@@ -32,6 +33,8 @@ function App() {
             </Route>
             <Route path="/my-page" element={<MyPage />} />
             <Route path="/my-page/edit" element={<InfoEditPage />} />
+            <Route path="/resume" element={<ResumeListPage />} />
+            <Route path="/resume/edit/:resumeId" element={<ResumeEditPage />} />
           </Routes>
         </Layout>
       </RecoilRoot>

@@ -1,0 +1,44 @@
+.resume-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 33.8rem;
+  height: 19.8rem;
+  box-shadow: inset 0 0 0 0.1rem $light-gray;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.menu-icon {
+  width: 2.6rem;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+.resume-card-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resume-card-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.resume-card-job {
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
+.resume-card-date {
+  font-size: 2rem;
+  color: $dark-gray;
+}
+
+.resume-card-tags {
+  display: flex;
+  gap: 0.5rem;
+}
