@@ -63,4 +63,15 @@ declare module 'props-type' {
     isVerified?: boolean;
     resumeId: number;
   };
+
+  export type RecordProps = {
+    isMini?: boolean;
+    needDetail?: boolean;
+    firstPlaceholder: string;
+    secondPlaceholder: string;
+  };
+
+  export type PaySliderProps = {
+    isHour: boolean;
+  };
 }
