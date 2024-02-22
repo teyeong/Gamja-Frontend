@@ -5,9 +5,11 @@
   width: 100%;
   @include mobile {
     height: 10rem;
+    margin-top: 4rem;
   }
   @include pc {
     height: 15rem;
+    margin-top: 8rem;
   }
   background-color: $pale-gray;
   position: relative;
@@ -31,9 +33,9 @@
 .wrapper {
   height: auto;
   @include mobile {
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 14rem);
   }
   @include pc {
-    min-height: calc(100vh - 15rem);
+    min-height: calc(100vh - 23rem);
   }
 }

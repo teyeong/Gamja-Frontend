@@ -1,0 +1,26 @@
+@import '../abstracts/colors';
+@import '../abstracts/mixin';
+
+.usertag {
+  border-radius: 0.5rem;
+  @include pc {
+    font-size: 2.4rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+.resume-tag {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 0.5rem;
+  @include pc {
+    font-size: 1.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+  img {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.3rem;
+  }
+}
