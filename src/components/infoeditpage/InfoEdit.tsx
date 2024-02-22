@@ -30,7 +30,7 @@ const InfoEdit = () => {
   }, [pwCheck, pw]);
 
   return (
-    <div className="indoedit-div">
+    <div className="infoedit-div">
       <div className="row-input-div inputs-div">
         <Input
           label="이름"
