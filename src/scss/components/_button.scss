@@ -89,3 +89,10 @@
     font-size: 2.8rem;
   }
 }
+
+.modal-btn {
+  @include btn;
+  width: 17.4rem;
+  height: 6rem;
+  font-size: 2.8rem;
+}

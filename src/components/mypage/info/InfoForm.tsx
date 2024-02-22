@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { InfoFormData } from 'data-type';
 import info from '../../../assets/mock/info.json';
 import Btn from 'components/_common/Btn';
+import WithdrawalModal from './WithdrawalModal';
 
 const InfoForm = () => {
   const [data, setData] = useState<Partial<InfoFormData>>({});
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     setData(info);
@@ -36,10 +38,11 @@ const InfoForm = () => {
         />
         <Btn
           label="회원탈퇴"
-          onClick={() => console.log('회원탈퇴 클릭')}
+          onClick={() => setModal(true)}
           styleClass="mini-btn red"
         />
       </div>
+      {modal && <WithdrawalModal setModal={setModal} />}
     </div>
   );
 };
