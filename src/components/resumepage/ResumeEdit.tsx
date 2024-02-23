@@ -45,7 +45,7 @@ const ResumeEdit = () => {
   ];
 
   return (
-    <div className="resume-list-wrapper">
+    <div className="container">
       <div className="resume-banner-container">
         <BannerBtn
           title="이력서 자동완성"
