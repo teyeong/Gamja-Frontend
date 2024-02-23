@@ -65,7 +65,7 @@ declare module 'props-type' {
     commuteType: string;
     profileImage?: string;
     careerYear?: number;
-    comments?: { commentType: number; comment: string[] }[];
+    recommendComments?: { commentType: number; comments: string[] }[];
   };
 
   export type RecordProps = {

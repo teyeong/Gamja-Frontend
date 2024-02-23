@@ -14,7 +14,7 @@ const ResumeLongCard = ({
   resumeId,
   profileImage,
   careerYear,
-  comments = [],
+  recommendComments = [],
 }: ResumeCardProps) => {
   const url = `/resume/detail/${resumeId}`;
   return (
@@ -51,22 +51,22 @@ const ResumeLongCard = ({
               </div>
             ))}
           </div>
-          {comments.length != 0 && (
+          {recommendComments.length != 0 && (
             <div className="resume-comment-container">
-              {comments.map((cm, index) => (
+              {recommendComments.map((cm, index) => (
                 <div className="resume-title-container" key={index}>
                   <img src={check} />
                   <div className="resume-comment-txt">
                     {cm.commentType == 1 && (
                       <>
-                        <span>{cm.comment[0]}</span>의 요구사항과
-                        <span>{cm.comment[1]}</span> 일치해요!
+                        <span>{cm.comments[0]}</span>의 요구사항과
+                        <span>{cm.comments[1]}</span> 일치해요!
                       </>
                     )}
                     {cm.commentType == 2 && (
                       <>
-                        <span>{cm.comment[0]}</span>와{' '}
-                        <span>{cm.comment[1]}</span>를 능숙하게 다룰 수 있어요!
+                        <span>{cm.comments[0]}</span>와{' '}
+                        <span>{cm.comments[1]}</span>를 능숙하게 다룰 수 있어요!
                       </>
                     )}
                   </div>

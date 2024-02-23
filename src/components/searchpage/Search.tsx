@@ -16,8 +16,8 @@ const Search = () => {
   const workType = ['강연', '멘토링'];
   const skills = ['React', 'JavaScript', 'TypeScript'];
   const commentData = [
-    { commentType: 1, comment: ['OO님', '96%'] },
-    { commentType: 2, comment: ['React.js', 'Vue.js'] },
+    { commentType: 1, comments: ['OO님', '96%'] },
+    { commentType: 2, comments: ['React.js', 'Vue.js'] },
   ];
   const tooltipTxt = `예시) 기계 산업 도면에 대한 경험 또는 교육을 받은 자`;
   return (
@@ -76,7 +76,7 @@ const Search = () => {
             isVerified={true}
             resumeId={1}
             profileImage={profile}
-            comments={commentData}
+            recommendComments={commentData}
           />
           <ResumeLongCard
             title="김**"
@@ -89,7 +89,7 @@ const Search = () => {
             isVerified={true}
             resumeId={1}
             profileImage={profile}
-            comments={commentData}
+            recommendComments={commentData}
           />
         </div>
       </div>
