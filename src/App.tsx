@@ -15,6 +15,7 @@ import CompanyForm from 'components/signuppage/form/CompanyForm';
 import InfoEditPage from 'pages/InfoEditPage';
 import ResumeEditPage from 'pages/ResumeEditPage';
 import ResumeListPage from 'pages/ResumeListPage';
+import SearchPage from 'pages/SearchPage';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/my-page/edit" element={<InfoEditPage />} />
             <Route path="/resume" element={<ResumeListPage />} />
             <Route path="/resume/edit/:resumeId" element={<ResumeEditPage />} />
+            <Route path="/search" element={<SearchPage />} />
           </Routes>
         </Layout>
       </RecoilRoot>

@@ -55,13 +55,17 @@ declare module 'props-type' {
 
   export type ResumeCardProps = {
     isDefault?: boolean;
+    isVerified?: boolean;
+    resumeId: number;
     title: string;
     jobName: string;
     date: string;
     workType: string[];
+    skills?: string[];
     commuteType: string;
-    isVerified?: boolean;
-    resumeId: number;
+    profileImage?: string;
+    careerYear?: number;
+    comments?: { commentType: number; comment: string[] }[];
   };
 
   export type RecordProps = {

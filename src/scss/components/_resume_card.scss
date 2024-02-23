@@ -10,6 +10,20 @@
   padding: 2rem;
 }
 
+.resume-long-card {
+  @extend .resume-card;
+  width: 74.6rem;
+  height: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.resume-card-profile {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 2rem;
+}
+
 .menu-icon {
   width: 2.6rem;
   position: absolute;
@@ -21,6 +35,17 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.resume-long-card-contents {
+  @extend .resume-card-contents;
+  gap: 1rem;
+}
+
+.resume-title-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .resume-card-title {
@@ -41,4 +66,26 @@
 .resume-card-tags {
   display: flex;
   gap: 0.5rem;
+  height: 3rem;
+}
+
+.resume-comment-container {
+  @extend .resume-card-contents;
+  margin-top: 1rem;
+}
+
+.resume-comment-txt {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: $dark-gray;
+  span {
+    color: $dark-green;
+  }
+}
+
+.resume-long-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
