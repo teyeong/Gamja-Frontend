@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ResumeList = () => {
   const workType = ['강연', '멘토링'];
   return (
-    <div className="resume-list-wrapper">
+    <div className="container">
       <Link to="/resume/edit">
         <BannerBtn
           title="새 이력서 작성하기"

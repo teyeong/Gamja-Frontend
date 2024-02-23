@@ -55,13 +55,17 @@ declare module 'props-type' {
 
   export type ResumeCardProps = {
     isDefault?: boolean;
+    isVerified?: boolean;
+    resumeId: number;
     title: string;
     jobName: string;
     date: string;
     workType: string[];
+    skills?: string[];
     commuteType: string;
-    isVerified?: boolean;
-    resumeId: number;
+    profileImage?: string;
+    careerYear?: number;
+    recommendComments?: { commentType: number; comments: string[] }[];
   };
 
   export type RecordProps = {
@@ -73,5 +77,13 @@ declare module 'props-type' {
 
   export type PaySliderProps = {
     isHour: boolean;
+  };
+
+  export type BannerProps = {
+    image: string;
+    title: string;
+    content: string;
+    subContent?: string;
+    styleClass?: string;
   };
 }

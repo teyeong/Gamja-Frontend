@@ -4,7 +4,7 @@ import { PaySliderProps } from 'props-type';
 
 const hourMarks: SliderSingleProps['marks'] = {
   0: '0원',
-  100: '50만원',
+  50: '50만원',
 };
 
 const monthMarks: SliderSingleProps['marks'] = {

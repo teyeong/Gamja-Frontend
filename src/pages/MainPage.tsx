@@ -1,10 +1,10 @@
 import Contents from 'components/mainpage/Contents';
-import Banner from 'components/mainpage/Banner';
+import MainBanner from 'components/mainpage/MainBanner';
 
 const MainPage = () => {
   return (
     <div className="main-div">
-      <Banner />
+      <MainBanner />
       <Contents />
     </div>
   );
