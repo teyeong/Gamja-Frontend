@@ -45,7 +45,7 @@ const ResumeEdit = () => {
   ];
 
   return (
-    <div className="resume-list-wrapper">
+    <div className="container">
       <div className="resume-banner-container">
         <BannerBtn
           title="이력서 자동완성"
@@ -168,12 +168,20 @@ const ResumeEdit = () => {
             options={commuteTypeData}
           />
         </div>
-        <button
-          className="resume-submit-btn dark-green"
-          onClick={() => navigate('/resume')}
-        >
-          이력서 저장
-        </button>
+        <div className="work-type-container">
+          <button
+            className={`resume-submit-btn ${'white'}`}
+            onClick={() => navigate('/resume')}
+          >
+            임시 저장
+          </button>
+          <button
+            className={`resume-submit-btn ${'dark-green'}`}
+            onClick={() => navigate('/resume')}
+          >
+            이력서 등록
+          </button>
+        </div>
       </div>
     </div>
   );
