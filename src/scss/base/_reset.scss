@@ -1,7 +1,4 @@
-@font-face {
-  font-family: pretendard;
-  src: url('../../assets/font/PretendardVariable.ttf') format('truetype');
-}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
 
 html {
   font-size: 62.5%;
@@ -9,7 +6,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'pretendard';
+  font-family: 'Pretendard Variable', Pretendard;
   color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
