@@ -15,7 +15,7 @@
 
 /* mainpage content responsive web setting */
 @mixin main-mobile {
-  @media (max-width: $main-breakpoint) {
+  @media (max-width: $main-breakpoint) and (min-width: $mobile) {
     @content;
   }
 }

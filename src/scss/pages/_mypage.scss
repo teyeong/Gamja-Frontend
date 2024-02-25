@@ -13,11 +13,10 @@
   @include pc {
     display: flex;
     flex-direction: column;
-    .temp-resume {
+    .defaultResume-outline {
       width: 37.8rem;
       height: 23.8rem;
       border-radius: 1rem;
-      font-size: 3.2rem;
     }
   }
 }
