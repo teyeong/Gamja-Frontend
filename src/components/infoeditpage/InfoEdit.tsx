@@ -11,6 +11,7 @@ const InfoEdit = () => {
 
   useEffect(() => {
     setData(mockUser);
+    setEmail(mockUser.email);
   }, []);
 
   const [pw, setPw] = useState('');
@@ -28,6 +29,10 @@ const InfoEdit = () => {
       setAlertText('비밀번호가 일치하지 않습니다.');
     }
   }, [pwCheck, pw]);
+
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
 
   return (
     <div className="infoedit-div">
@@ -103,7 +108,8 @@ const InfoEdit = () => {
         <Input
           label="이메일"
           styleClass="row"
-          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          onChange={handleEmail}
         />
       </div>
       <div className="btns-div">
