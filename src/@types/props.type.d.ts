@@ -86,4 +86,9 @@ declare module 'props-type' {
     subContent?: string;
     styleClass?: string;
   };
+
+  export type TermsProps = {
+    agree: boolean;
+    setAgree: React.Dispatch<React.SetStateAction<boolean>>;
+  };
 }
