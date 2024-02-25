@@ -16,7 +16,7 @@ declare module 'props-type' {
     styleClass?: string;
     isWrong?: boolean;
     alertText?: string;
-    content?: string;
+    defaultValue?: string;
     type?: string;
     placeholder?: string;
     disabled?: boolean;

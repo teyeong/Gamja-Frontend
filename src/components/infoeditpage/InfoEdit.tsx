@@ -35,13 +35,13 @@ const InfoEdit = () => {
         <Input
           label="이름"
           styleClass="row"
-          content={data.name}
+          defaultValue={data.name}
           disabled={true}
         />
         <Input
           label="아이디"
           styleClass="row"
-          content={data.id}
+          defaultValue={data.id}
           disabled={true}
         />
         <Input
@@ -90,7 +90,7 @@ const InfoEdit = () => {
             <Input
               label="연락처"
               styleClass="row"
-              content={data.phone}
+              defaultValue={data.phone}
               disabled={true}
             />
             <Btn

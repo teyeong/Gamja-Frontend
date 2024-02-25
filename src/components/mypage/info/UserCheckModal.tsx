@@ -21,7 +21,7 @@ const UserCheckModal = ({ setModal }: ModalProps) => {
       </p>
       <Input
         label=""
-        content={data.id}
+        defaultValue={data.id}
         disabled={true}
         isAlertRequired={false}
       />
