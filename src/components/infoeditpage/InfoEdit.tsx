@@ -11,6 +11,7 @@ const InfoEdit = () => {
 
   useEffect(() => {
     setData(mockUser);
+    setEmail(mockUser.email);
   }, []);
 
   const [pw, setPw] = useState('');
@@ -29,19 +30,23 @@ const InfoEdit = () => {
     }
   }, [pwCheck, pw]);
 
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
   return (
     <div className="infoedit-div">
       <div className="row-input-div inputs-div">
         <Input
           label="이름"
           styleClass="row"
-          content={data.name}
+          defaultValue={data.name}
           disabled={true}
         />
         <Input
           label="아이디"
           styleClass="row"
-          content={data.id}
+          defaultValue={data.id}
           disabled={true}
         />
         <Input
@@ -90,7 +95,7 @@ const InfoEdit = () => {
             <Input
               label="연락처"
               styleClass="row"
-              content={data.phone}
+              defaultValue={data.phone}
               disabled={true}
             />
             <Btn
@@ -103,7 +108,8 @@ const InfoEdit = () => {
         <Input
           label="이메일"
           styleClass="row"
-          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          onChange={handleEmail}
         />
       </div>
       <div className="btns-div">
