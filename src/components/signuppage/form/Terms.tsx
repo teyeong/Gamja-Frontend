@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
-const Terms = () => {
-  const [agree, setAgree] = useState(false);
+import { TermsProps } from 'props-type';
+
+const Terms = ({ agree, setAgree }: TermsProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {

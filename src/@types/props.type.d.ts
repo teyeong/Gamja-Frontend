@@ -16,7 +16,8 @@ declare module 'props-type' {
     styleClass?: string;
     isWrong?: boolean;
     alertText?: string;
-    content?: string;
+    defaultValue?: string;
+    value?: string;
     type?: string;
     placeholder?: string;
     disabled?: boolean;
@@ -85,5 +86,10 @@ declare module 'props-type' {
     content: string;
     subContent?: string;
     styleClass?: string;
+  };
+
+  export type TermsProps = {
+    agree: boolean;
+    setAgree: React.Dispatch<React.SetStateAction<boolean>>;
   };
 }

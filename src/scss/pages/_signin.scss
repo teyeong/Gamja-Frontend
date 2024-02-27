@@ -64,13 +64,14 @@
   margin-bottom: 8rem;
 
   button {
+    color: $black;
+    cursor: pointer;
     @include pc {
       font-size: 2rem;
     }
     @include mobile {
       font-size: 1.8rem;
     }
-    cursor: pointer;
   }
   .signup {
     color: $dark-green;

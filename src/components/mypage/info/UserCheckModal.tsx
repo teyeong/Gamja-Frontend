@@ -21,15 +21,15 @@ const UserCheckModal = ({ setModal }: ModalProps) => {
       </p>
       <Input
         label=""
-        styleClass="alert-none"
-        content={data.id}
+        defaultValue={data.id}
         disabled={true}
+        isAlertRequired={false}
       />
       <Input
         label=""
-        styleClass="alert-none"
         placeholder="비밀번호"
         type="password"
+        isAlertRequired={false}
       />
       <div className="modal-btn-div">
         <Btn

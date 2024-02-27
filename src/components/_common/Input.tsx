@@ -7,7 +7,8 @@ const Input = ({
   styleClass,
   isWrong = false,
   alertText = '',
-  content = '',
+  defaultValue,
+  value,
   type = 'text',
   placeholder,
   disabled = false,
@@ -26,7 +27,7 @@ const Input = ({
               name={label}
               className="input"
               disabled
-              defaultValue={content}
+              defaultValue={defaultValue}
             />
           ) : (
             <input
@@ -35,7 +36,7 @@ const Input = ({
               onChange={onChange}
               type={type}
               placeholder={placeholder}
-              defaultValue={content}
+              value={value}
             />
           )}
           {isAlertRequired && <p className="alert-text">{alertText}</p>}
