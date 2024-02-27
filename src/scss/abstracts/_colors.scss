@@ -27,6 +27,11 @@
   color: $kakao-label;
 }
 
+.disabled {
+  background-color: $gray;
+  color: $white;
+}
+
 /* mini button colors */
 .light-gray {
   background-color: $white;

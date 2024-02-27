@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Select, Space } from 'antd';
+import { Select } from 'antd';
 import type { SelectProps } from 'antd';
 import SelectTag from './SelectTag';
 import BannerBtn from './BannerBtn';
@@ -44,18 +44,20 @@ const ResumeEdit = () => {
     { value: '상주 근무 및 원격 근무', label: '상주 근무 및 원격 근무' },
   ];
 
+  const isSubmitted = true;
+
   return (
-    <div className="container">
+    <div className="sub-container">
       <div className="resume-banner-container">
         <BannerBtn
           title="이력서 자동완성"
-          content="기존 이력서 파일 업로드하기"
+          content="기존 이력서 파일 업로드"
           svg={resume}
           styleClass="dark-green"
         />
         <BannerBtn
           title="경력 인증하기"
-          content="건강보험공단에서 경력 불러오기"
+          content="건강보험공단 통해 경력 조회"
           svg={bulb}
           styleClass="dark-blue"
         />
@@ -77,20 +79,20 @@ const ResumeEdit = () => {
         </div>
         <div>
           <Label label="직군 및 직무" isRequired={true} />
-          <Space style={{ gap: '3rem' }}>
+          <div className="select-container">
             <Select
-              className="select"
+              className="select-mini"
               defaultValue="직군"
               onChange={onAreaChange}
               options={areaData}
             />
             <Select
-              className="select"
+              className="select-mini"
               defaultValue="직무"
               onChange={onAreaChange}
               options={jobData}
             />
-          </Space>
+          </div>
         </div>
         <div>
           <Label label="총 경력" isRequired={true} />
@@ -175,12 +177,21 @@ const ResumeEdit = () => {
           >
             임시 저장
           </button>
-          <button
-            className={`resume-submit-btn ${'dark-green'}`}
-            onClick={() => navigate('/resume')}
-          >
-            이력서 등록
-          </button>
+          {isSubmitted ? (
+            <button
+              className={`resume-submit-btn ${'dark-green'}`}
+              onClick={() => navigate('/resume')}
+            >
+              이력서 재등록
+            </button>
+          ) : (
+            <button
+              className={`resume-submit-btn ${'dark-green'}`}
+              onClick={() => navigate('/resume')}
+            >
+              이력서 등록
+            </button>
+          )}
         </div>
       </div>
     </div>

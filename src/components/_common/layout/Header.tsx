@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
   const isLogin = false;
   const isMobile: boolean = useMediaQuery({
-    query: '(max-width:785px)',
+    query: '(max-width:802px)',
   });
   const navigate = useNavigate();
   return (

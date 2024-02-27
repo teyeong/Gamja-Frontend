@@ -21,7 +21,7 @@ const ResumeLongCard = ({
     <Link to={url}>
       <div className="resume-long-card">
         <img className="resume-card-profile" src={profileImage} />
-        <div className="resume-long-card-contents">
+        <div className="resume-card-contents">
           <div className="resume-title-container">
             <div className="resume-card-title">{title}</div>
             <div className="resume-card-tags">

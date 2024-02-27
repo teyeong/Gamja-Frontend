@@ -1,4 +1,21 @@
 import { RecordProps } from 'props-type';
+
+const RecordDate = () => {
+  return (
+    <>
+      <div className="record-container">
+        <div className="record-date ">
+          <input placeholder="0000" />년{' '}
+          <input className="record-date-mini" placeholder="00" />월 -{' '}
+          <input placeholder="0000" />년{' '}
+          <input className="record-date-mini" placeholder="00" />월
+        </div>
+        <div className="record-date">x</div>
+      </div>
+    </>
+  );
+};
+
 const Record = ({
   isMini = false,
   needDetail = false,
@@ -9,15 +26,7 @@ const Record = ({
     <>
       {isMini ? (
         <div className="record-wrapper record-mini">
-          <div className="record-container">
-            <div className="record-date ">
-              <input placeholder="0000" />년{' '}
-              <input style={{ width: '3rem' }} placeholder="00" />월 -{' '}
-              <input placeholder="0000" />년{' '}
-              <input style={{ width: '3rem' }} placeholder="00" />월
-            </div>
-            <div className="record-date">x</div>
-          </div>
+          <RecordDate />
           <input className="input" placeholder={firstPlaceholder} />
           <textarea
             className="resume-text-area"
@@ -27,15 +36,7 @@ const Record = ({
         </div>
       ) : (
         <div className="record-wrapper">
-          <div className="record-container">
-            <div className="record-date">
-              <input placeholder="0000" />년{' '}
-              <input style={{ width: '3rem' }} placeholder="00" />월 -{' '}
-              <input placeholder="0000" />년{' '}
-              <input style={{ width: '3rem' }} placeholder="00" />월
-            </div>
-            <div className="record-date">x</div>
-          </div>
+          <RecordDate />
           <input className="input" placeholder={firstPlaceholder} />
           {needDetail ? (
             <textarea
