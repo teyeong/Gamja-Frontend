@@ -1,9 +1,17 @@
 .resume-card-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 78.6rem;
-  gap: 3rem;
-  margin-top: 8rem;
+  @include pc {
+    flex-wrap: wrap;
+    width: 78.6rem;
+    gap: 3rem;
+    margin-top: 8rem;
+  }
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
 }
 
 .resume-banner-container {

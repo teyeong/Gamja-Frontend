@@ -3,11 +3,16 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  width: 33.8rem;
-  height: 19.8rem;
   box-shadow: inset 0 0 0 0.1rem $light-gray;
   border-radius: 1rem;
   padding: 2rem;
+  @include pc {
+    width: 33.8rem;
+  }
+  @include mobile {
+    width: calc(100% - 4rem);
+  }
+  height: 19.8rem;
 }
 
 .resume-long-card {
@@ -34,11 +39,6 @@
 .resume-card-contents {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.resume-long-card-contents {
-  @extend .resume-card-contents;
   gap: 1rem;
 }
 

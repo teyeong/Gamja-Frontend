@@ -1,20 +1,20 @@
 import BannerBtn from './BannerBtn';
 import ResumeCard from './ResumeCard';
 import resume from '../../assets/icons/resume.svg';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ResumeList = () => {
   const workType = ['강연', '멘토링'];
+  const navigate = useNavigate();
   return (
-    <div className="container">
-      <Link to="/resume/edit">
-        <BannerBtn
-          title="새 이력서 작성하기"
-          content="이력서 등록하고 새로운 미래 찾아보기"
-          svg={resume}
-          styleClass="dark-green"
-        />
-      </Link>
+    <div className="sub-container">
+      <BannerBtn
+        title="새 이력서 작성하기"
+        content="새로운 이력서 등록하기"
+        svg={resume}
+        styleClass="dark-green"
+        onClick={() => navigate('/resume/edit/new')}
+      />
       <div className="resume-card-container">
         <ResumeCard
           isDefault={true}

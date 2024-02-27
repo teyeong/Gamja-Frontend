@@ -35,6 +35,7 @@ declare module 'props-type' {
     content: string;
     styleClass: string;
     subtitle?: string;
+    onClick?: () => void;
   };
 
   export type TitleProps = {
