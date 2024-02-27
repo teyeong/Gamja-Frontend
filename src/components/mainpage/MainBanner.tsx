@@ -15,7 +15,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 export default function MainBanner() {
   const navigate = useNavigate();
-
+  const ment = "'다시'가 선별한\n 시니어 전문가들을 만나보세요!";
   return (
     <>
       <Swiper
@@ -31,7 +31,7 @@ export default function MainBanner() {
           <Banner
             image={banner}
             title="다시: 시니어 전문가 인재풀"
-            content="다시가 선별한 시니어 전문가들을 만나보세요!"
+            content={ment}
             subContent="당신을 위한 시니어 전문가 인재풀 다시"
             styleClass="banner-main"
           />

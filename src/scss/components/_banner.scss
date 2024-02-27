@@ -56,6 +56,15 @@
   }
 }
 
+.banner-search {
+  @include mobile {
+    height: 20rem;
+    img {
+      height: 20rem;
+    }
+  }
+}
+
 .banner-bg {
   position: absolute;
   top: 0;
@@ -72,17 +81,37 @@
   font-weight: 600;
   color: $white;
   text-align: center;
+  white-space: pre-line;
   .title {
-    font-size: 4.8rem;
-    margin: 0 0 8rem 0;
+    @include pc {
+      font-size: 4.8rem;
+      margin: 0 0 8rem 0;
+    }
+    @include mobile {
+      font-size: 3.6rem;
+      margin: 0 0 8rem 0;
+    }
   }
   .content {
-    font-size: 3.6rem;
-    margin-bottom: 2rem;
     font-weight: 500;
+    @include pc {
+      font-size: 3.6rem;
+      margin-bottom: 2rem;
+    }
+    @include mobile {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
   }
   .mini {
-    font-size: 2.4rem;
     font-weight: 400;
+    @include pc {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+    }
+    @include mobile {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
   }
 }

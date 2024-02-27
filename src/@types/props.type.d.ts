@@ -83,8 +83,8 @@ declare module 'props-type' {
 
   export type BannerProps = {
     image: string;
-    title: string;
-    content: string;
+    title?: string;
+    content?: string;
     subContent?: string;
     styleClass?: string;
   };

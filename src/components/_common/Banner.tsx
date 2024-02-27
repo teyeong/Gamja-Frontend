@@ -9,9 +9,9 @@ const Banner = ({
   return (
     <div className={`banner ${styleClass}`}>
       <img src={image} />
-      <div className="banner-bg"></div>
+      <div className={`banner-bg ${styleClass}`}></div>
       <div className="banner-txt">
-        <div className="title">{title}</div>
+        {title && <div className="title">{title}</div>}
         <div className="content">{content}</div>
         <div className="mini">{subContent}</div>
       </div>
