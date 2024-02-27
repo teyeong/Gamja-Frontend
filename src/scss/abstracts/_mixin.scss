@@ -26,6 +26,18 @@
   }
 }
 
+@mixin comment-pc {
+  @media (min-width: ($comment-breakpoint + 1)) {
+    @content;
+  }
+}
+
+@mixin comment-mobile {
+  @media (max-width: $comment-breakpoint) {
+    @content;
+  }
+}
+
 /* button common css */
 @mixin btn {
   display: flex;

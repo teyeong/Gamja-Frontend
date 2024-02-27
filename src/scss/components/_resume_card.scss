@@ -17,10 +17,15 @@
 
 .resume-long-card {
   @extend .resume-card;
-  width: 74.6rem;
+  @include pc {
+    width: 74.6rem;
+  }
   height: auto;
+}
+
+.resume-long-sub {
+  display: flex;
   flex-direction: row;
-  justify-content: flex-start;
 }
 
 .resume-card-profile {
@@ -50,12 +55,22 @@
 
 .resume-card-title {
   font-weight: 700;
-  font-size: 2.4rem;
+  @include pc {
+    font-size: 2.4rem;
+  }
+  @include mobile {
+    font-size: 2.2rem;
+  }
 }
 
 .resume-card-job {
   font-weight: 500;
-  font-size: 2.2rem;
+  @include pc {
+    font-size: 2.2rem;
+  }
+  @include mobile {
+    font-size: 2rem;
+  }
 }
 
 .resume-card-date {
@@ -67,17 +82,33 @@
   display: flex;
   gap: 0.5rem;
   height: 3rem;
+  .text {
+    font-size: 1.6rem;
+    color: $dark-gray;
+    margin-top: 0.5rem;
+  }
 }
 
 .resume-comment-container {
   @extend .resume-card-contents;
-  margin-top: 1rem;
+  gap: 0.5rem;
+  @include comment-pc {
+    margin: 2rem 0rem 0 8rem;
+  }
+  @include comment-mobile {
+    margin: 2rem 0rem 0 0rem;
+  }
 }
 
 .resume-comment-txt {
-  white-space: nowrap;
+  white-space: pre-line;
   font-weight: 500;
-  font-size: 1.8rem;
+  @include pc {
+    font-size: 1.8rem;
+  }
+  @include mobile {
+    font-size: 1.6rem;
+  }
   color: $dark-gray;
   span {
     color: $dark-green;
@@ -85,6 +116,7 @@
 }
 
 .resume-long-card-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
