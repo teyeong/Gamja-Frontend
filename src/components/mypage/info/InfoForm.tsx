@@ -13,7 +13,7 @@ const InfoForm = () => {
   }, []);
 
   return (
-    <div className="infoForm-div light-gray">
+    <div className="infoForm-div">
       <div className="infoForm-box">
         <p>이름</p>
         <p>{data.name}</p>
