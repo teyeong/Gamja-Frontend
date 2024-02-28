@@ -35,7 +35,7 @@ const Terms = ({ agree, setAgree }: TermsProps) => {
         </div>
       </div>
       {isOpen && (
-        <div>
+        <>
           <div className="terms-text light-gray">
             <p>
               본인은 귀사에 이력서를 제출함에 따라 [개인정보 보호법] 제15조 및
@@ -73,7 +73,7 @@ const Terms = ({ agree, setAgree }: TermsProps) => {
               <p>비동의</p>
             </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

@@ -1,14 +1,21 @@
 @import '../abstracts/colors';
 @import '../abstracts/mixin';
 
-/* Verification style */
-.signup-veri-div {
+/* main div for display: flex */
+.signup-main-div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Verification style */
+.signup-veri-div {
   div:last-child {
     margin-top: 2rem;
     margin-bottom: 25rem;
+  }
+  @include mobile {
+    width: calc(100% - 4.8rem);
   }
 }
 
@@ -19,6 +26,12 @@
   @include pc {
     font-size: 3.2rem;
     margin-bottom: 8rem;
+    line-height: 1.3;
+  }
+  @include mobile {
+    font-size: 2.4rem;
+    margin-bottom: 6rem;
+    line-height: 1.4;
   }
 }
 
@@ -30,18 +43,23 @@
   border-radius: 1rem;
   font-weight: 700;
   cursor: pointer;
-
+  div {
+    display: flex;
+    align-items: center;
+  }
   @include pc {
     width: 50.2rem;
     height: 15rem;
     padding: 0 4rem;
-
-    div {
-      display: flex;
-      align-items: center;
-      p {
-        font-size: 3.2rem;
-      }
+    font-size: 3.2rem;
+  }
+  @include mobile {
+    width: calc(100% - 4.8rem);
+    height: 10rem;
+    padding: 0 2.4rem;
+    font-size: 2.6rem;
+    img {
+      width: 8rem;
     }
   }
 }
@@ -53,18 +71,22 @@
   justify-content: space-between;
   @include pc {
     height: 35rem;
-    margin-bottom: 21rem;
+    padding-bottom: 21rem;
+  }
+  @include mobile {
+    width: calc(100% - 4.8rem);
+    height: 22rem;
   }
 }
 
 /* Form style */
 .signup-form-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   .inputs-div {
     display: flex;
     flex-direction: column;
+  }
+  @include mobile {
+    width: calc(100% - 4.8rem);
   }
 }
 
@@ -73,9 +95,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include pc {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
 }
 
 .terms-title-div {
@@ -99,6 +119,14 @@
       font-size: 3.2rem;
     }
   }
+  @include mobile {
+    width: calc(100% - 4rem);
+    height: 6rem;
+
+    p {
+      font-size: 2.2rem;
+    }
+  }
 
   div {
     display: flex;
@@ -106,11 +134,13 @@
     p {
       font-weight: 500;
       color: $gray;
-    }
-    @include pc {
-      p {
+      @include pc {
         font-size: 2.4rem;
         margin-left: 1.6rem;
+      }
+      @include mobile {
+        font-size: 2rem;
+        margin-left: 1rem;
       }
     }
   }
@@ -125,12 +155,22 @@
       font-size: 2rem;
     }
   }
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    p {
+      font-size: 1.6rem;
+    }
+  }
 }
 
 .terms-check-div {
   display: flex;
   justify-content: end;
-  width: 78.6rem;
   .checkbox {
     display: flex;
     align-items: center;
@@ -141,11 +181,21 @@
   }
 
   @include pc {
+    width: 78.6rem;
     .checkbox:first-child {
       margin-right: 3rem;
     }
     p {
       font-size: 2.4rem;
+    }
+  }
+  @include mobile {
+    width: 100%;
+    .checkbox:first-child {
+      margin-right: 2rem;
+    }
+    p {
+      font-size: 2rem;
     }
   }
 }
@@ -158,12 +208,16 @@
     width: 3.6rem;
     height: 3.6rem;
   }
+  @include mobile {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }
 
 /* Complete style */
 .signup-comp-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-bottom: 36.4rem;
+  @include mobile {
+    width: calc(100% - 4.8rem);
+  }
 }
