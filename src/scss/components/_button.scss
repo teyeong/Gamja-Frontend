@@ -92,7 +92,14 @@
 
 .modal-btn {
   @include btn;
-  width: 17.4rem;
-  height: 6rem;
-  font-size: 2.8rem;
+  @include pc {
+    width: 17.4rem;
+    height: 6rem;
+    font-size: 2.8rem;
+  }
+  @include mobile {
+    width: 33vw;
+    height: 5rem;
+    font-size: 2rem;
+  }
 }
