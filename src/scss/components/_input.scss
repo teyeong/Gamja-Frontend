@@ -162,13 +162,13 @@
 .alert-text {
   display: flex;
   align-items: center;
-  width: max-content;
+  word-wrap: break-word;
   @include pc {
-    height: 4rem;
+    min-height: 4rem;
     font-size: 2rem;
   }
   @include mobile {
-    height: 3rem;
+    min-height: 3rem;
     font-size: 1.8rem;
   }
 }
