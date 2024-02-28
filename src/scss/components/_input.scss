@@ -22,6 +22,12 @@
     @include pc {
       width: 52.2rem;
     }
+    @include mobile {
+      width: 40vw;
+      button {
+        margin-top: 1rem;
+      }
+    }
   }
 }
 
@@ -67,7 +73,12 @@
     width: 66.6rem;
     justify-content: space-between;
     &.phone-num .alert-text {
-      height: 2rem;
+      min-height: 2rem;
+    }
+  }
+  @include mobile {
+    &.phone-num .alert-text {
+      display: none;
     }
   }
   .input-label-box {
@@ -168,7 +179,7 @@
     font-size: 2rem;
   }
   @include mobile {
-    min-height: 3rem;
+    min-height: 2rem;
     font-size: 1.8rem;
   }
 }
