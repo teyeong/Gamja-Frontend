@@ -15,5 +15,8 @@
       margin-bottom: 6rem;
       box-shadow: 0 0 0 0.1rem $light-gray;
     }
+    @include mobile {
+      width: calc(100% - 4.8rem);
+    }
   }
 }

@@ -68,15 +68,6 @@
   }
 }
 
-.btns-div {
-  display: flex;
-  justify-content: space-between;
-  @include pc {
-    width: 78.6rem;
-    margin-bottom: 8rem;
-  }
-}
-
 /* Terms style */
 .terms-div {
   display: flex;
