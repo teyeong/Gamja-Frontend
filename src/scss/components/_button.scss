@@ -118,7 +118,7 @@
     margin-bottom: 8rem;
   }
   @include mobile {
-    width: calc(100% - 4.8rem);
+    width: 100%;
     button:last-child {
       margin-top: 1.6rem;
     }
