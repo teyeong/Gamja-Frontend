@@ -10,6 +10,7 @@
     border-radius: 1rem;
     padding: 4rem;
     position: relative;
+    box-shadow: inset 0 0 0 0.1rem $light-gray;
   }
 }
 
@@ -19,13 +20,26 @@
     font-size: 2.4rem;
     margin-bottom: 2rem;
   }
+  @include mobile {
+    flex-direction: column;
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
   p:first-child {
     font-weight: 600;
-    width: 8.3rem;
+    @include pc {
+      width: 8.3rem;
+    }
   }
   p:last-child {
     word-wrap: break-word;
-    width: 21.5rem;
+    @include pc {
+      width: 21.5rem;
+    }
+    @include mobile {
+      width: 100%;
+      margin-top: 0.7rem;
+    }
   }
 }
 

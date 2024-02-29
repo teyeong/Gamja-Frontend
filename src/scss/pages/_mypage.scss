@@ -13,11 +13,17 @@
   @include pc {
     display: flex;
     flex-direction: column;
-    .defaultResume-outline {
-      width: 37.8rem;
-      height: 23.8rem;
-      border-radius: 1rem;
-    }
+  }
+}
+
+.defaultResume-outline {
+  border-radius: 1rem;
+  height: 23.8rem;
+  @include pc {
+    width: 37.8rem;
+  }
+  @include mobile {
+    width: 100%;
   }
 }
 
@@ -34,6 +40,13 @@
       margin-left: 3rem;
     }
   }
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    .mypage-mobile-div {
+      width: calc(100% - 4.8rem);
+    }
+  }
 }
 
 .mypage-title {
@@ -41,6 +54,13 @@
   @include pc {
     font-size: 3.6rem;
     font-weight: 500;
+  }
+  @include mobile {
+    font-size: 2.2rem;
+    font-weight: 600;
+    &.profile-title {
+      display: none;
+    }
   }
 }
 
@@ -53,5 +73,13 @@
     display: flex;
     justify-content: space-between;
     height: 7rem;
+  }
+  @include mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.4rem;
+    margin-bottom: 1rem;
   }
 }

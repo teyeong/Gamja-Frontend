@@ -13,8 +13,8 @@ const Profile = () => {
   }, []);
 
   return (
-    <div>
-      <p className="mypage-title mypage-flexdiv">프로필</p>
+    <>
+      <p className="mypage-title mypage-flexdiv profile-title">프로필</p>
       <div className="profile-div light-gray">
         <Picture src={data.src} />
         <div className="profile-user-box">
@@ -25,7 +25,7 @@ const Profile = () => {
           <UserTag user={data.user ?? ''} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
