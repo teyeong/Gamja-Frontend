@@ -2,17 +2,49 @@ import Btn from 'components/_common/Btn';
 import Input from 'components/_common/Input';
 import KakaoBtn from 'components/_common/KakaoBtn';
 import { UserProps } from 'props-type';
+import { useEffect, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
 const SignInForm = ({ user }: UserProps) => {
   const navigate = useNavigate();
 
+  const [alertText, setAlertText] = useState('');
+
+  // make input field empty when user is changed
+  useEffect(() => {
+    setId('');
+    setPw('');
+    setAlertText('');
+  }, [user]);
+
+  // input useStates
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+
+  // check id or pw is filled
+  const idFilled = () => {
+    if (!id) {
+      setAlertText('아이디를 입력해 주세요.');
+      return false;
+    }
+    if (!pw) {
+      setAlertText('비밀번호를 입력해 주세요.');
+      return false;
+    }
+    setAlertText('');
+    return true;
+  };
+
+  // signin button click event handler
   const handleSubmit = () => {
-    if (user === 'senior') {
-      console.log('시니어 회원 로그인');
-    } else if (user === 'company') {
-      console.log('기업 회원 로그인');
+    if (idFilled()) {
+      // API connection is required
+      if (user === 'senior') {
+        console.log('시니어 로그인: ' + id + ', ' + pw);
+      } else if (user === 'company') {
+        console.log('기업 로그인: ' + id + ', ' + pw);
+      }
     }
   };
 
@@ -24,12 +56,19 @@ const SignInForm = ({ user }: UserProps) => {
   return (
     <div className="signin-form">
       <div className="input-signin-div">
-        <Input label="아이디" onChange={() => console.log('아이디')} />
+        <Input
+          label="아이디"
+          onChange={(e) => setId(e.target.value)}
+          value={id}
+        />
         <Input
           label="비밀번호"
-          onChange={() => console.log('비밀번호')}
+          onChange={(e) => setPw(e.target.value)}
           type="password"
+          isAlertRequired={false}
+          value={pw}
         />
+        <p className="signin-alert">{alertText}</p>
       </div>
       <div className="signin-btn-wrapper">
         <Btn
@@ -40,9 +79,13 @@ const SignInForm = ({ user }: UserProps) => {
         <KakaoBtn />
       </div>
       <div className="signin-mini-btns">
-        <button>아이디 찾기</button>
+        <button onClick={() => handleBtnClick('/find/id/form')}>
+          아이디 찾기
+        </button>
         <div className="line"></div>
-        <button>비밀번호 찾기</button>
+        <button onClick={() => handleBtnClick('/find/pw/form')}>
+          비밀번호 찾기
+        </button>
         <div className="line"></div>
         <button
           className="signup"
