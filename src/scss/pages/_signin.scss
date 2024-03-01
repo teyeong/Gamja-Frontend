@@ -55,6 +55,20 @@
   }
 }
 
+/* alert text style */
+.signin-alert {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  color: $red;
+  @include pc {
+    font-size: 1.8rem;
+  }
+  @include mobile {
+    font-size: 1.6rem;
+  }
+}
+
 /* 아이디 찾기, 비밀번호 찾기, 회원가입 button styles */
 .signin-mini-btns {
   display: flex;

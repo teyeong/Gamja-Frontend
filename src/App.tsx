@@ -16,6 +16,12 @@ import InfoEditPage from 'pages/InfoEditPage';
 import ResumeEditPage from 'pages/ResumeEditPage';
 import ResumeListPage from 'pages/ResumeListPage';
 import SearchPage from 'pages/SearchPage';
+import FindIdPage from 'pages/FindIdPage';
+import FindIdForm from 'components/findidpage/FindIdForm';
+import FindIdResult from 'components/findidpage/FindIdResult';
+import FindPwPage from 'pages/FindPwPage';
+import FindPwForm from 'components/findpwpage/FindPwForm';
+import FindPwReset from 'components/findpwpage/FindPwReset';
 
 function App() {
   return (
@@ -37,6 +43,14 @@ function App() {
             <Route path="/resume" element={<ResumeListPage />} />
             <Route path="/resume/edit/:resumeId" element={<ResumeEditPage />} />
             <Route path="/search" element={<SearchPage />} />
+            <Route path="/find/id" element={<FindIdPage />}>
+              <Route path="form" element={<FindIdForm />} />
+              <Route path="result" element={<FindIdResult />} />
+            </Route>
+            <Route path="/find/pw" element={<FindPwPage />}>
+              <Route path="form" element={<FindPwForm />} />
+              <Route path="reset" element={<FindPwReset />} />
+            </Route>
           </Routes>
         </Layout>
       </RecoilRoot>
