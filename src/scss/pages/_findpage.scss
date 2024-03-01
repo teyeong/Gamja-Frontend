@@ -68,3 +68,23 @@
     }
   }
 }
+
+/* for FindPwReset's info text */
+.text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    text-align: center;
+    &:last-child {
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+    @include pc {
+      font-size: 2.4rem;
+    }
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}
