@@ -6,7 +6,7 @@ const FindIdResult = () => {
   return (
     <div className="find-result-wrapper">
       <div>
-        <p>고객님의 회원정보와 아이디입니다.</p>
+        <p>고객님의 회원정보와 일치하는 아이디입니다.</p>
         <p>qwerty</p>
       </div>
       <div className="btns-div">
