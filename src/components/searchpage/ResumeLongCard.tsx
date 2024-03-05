@@ -85,14 +85,20 @@ const ResumeLongCard = ({
               <div className="resume-comment-txt">
                 {cm.commentType == 1 && (
                   <>
-                    <span>{cm.comments[0]}</span>의 요구사항과
-                    <span>{cm.comments[1]}</span> 일치해요!
+                    <span>{cm.comments[0]}</span>님의 요구사항과{' '}
+                    <span>{cm.comments[1]}</span>% 일치해요!
                   </>
                 )}
                 {cm.commentType == 2 && (
                   <>
                     <span>{cm.comments[0]}</span>와{' '}
                     <span>{cm.comments[1]}</span>를 능숙하게 다룰 수 있어요!
+                  </>
+                )}
+                {cm.commentType == 3 && <>희망하는 예산 범위와 일치해요!</>}
+                {cm.commentType == 4 && (
+                  <>
+                    <span>{cm.comments[0]}</span>년 경력자예요!
                   </>
                 )}
               </div>
