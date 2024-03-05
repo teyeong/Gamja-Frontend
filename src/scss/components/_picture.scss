@@ -3,9 +3,14 @@
 .picture-div {
   position: relative;
   cursor: pointer;
+  margin-left: 2.4rem;
   @include pc {
     width: 11rem;
     height: 11rem;
+  }
+  @include mobile {
+    width: 8.5rem;
+    height: 8.5rem;
   }
 }
 
@@ -16,18 +21,26 @@
     width: 10rem;
     height: 10rem;
   }
+  @include mobile {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 .picture-icon {
   position: absolute;
   border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0rem;
+  right: 0rem;
   @include pc {
     width: 4.5rem;
     height: 4.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0rem;
-    right: 0rem;
+  }
+  @include mobile {
+    width: 3.6rem;
+    height: 3.6rem;
   }
 }

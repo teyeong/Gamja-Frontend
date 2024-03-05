@@ -22,6 +22,12 @@
     @include pc {
       width: 52.2rem;
     }
+    @include mobile {
+      width: 40vw;
+      button {
+        margin-top: 1rem;
+      }
+    }
   }
 }
 
@@ -50,7 +56,7 @@
   }
 
   .alert-text {
-    height: 2rem;
+    min-height: 2rem;
   }
 }
 
@@ -67,7 +73,12 @@
     width: 66.6rem;
     justify-content: space-between;
     &.phone-num .alert-text {
-      height: 2rem;
+      min-height: 2rem;
+    }
+  }
+  @include mobile {
+    &.phone-num .alert-text {
+      display: none;
     }
   }
   .input-label-box {
@@ -162,13 +173,13 @@
 .alert-text {
   display: flex;
   align-items: center;
-  width: max-content;
+  word-wrap: break-word;
   @include pc {
-    height: 4rem;
+    min-height: 4rem;
     font-size: 2rem;
   }
   @include mobile {
-    height: 3rem;
+    min-height: 3rem;
     font-size: 1.8rem;
   }
 }

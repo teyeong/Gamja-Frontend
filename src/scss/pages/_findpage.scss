@@ -1,0 +1,90 @@
+.find-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find-form-wrapper {
+  @include mobile {
+    width: calc(100% - 4.8rem);
+  }
+
+  .inputs-div {
+    display: flex;
+    flex-direction: column;
+    @include pc {
+      padding: 4rem;
+      border-radius: 1rem;
+      box-shadow: inset 0 0 0 0.1rem $light-gray;
+      margin-bottom: 6rem;
+      .alert-text {
+        font-size: 2rem;
+      }
+    }
+    @include mobile {
+      margin-bottom: 3rem;
+      .alert-text {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.find-result-wrapper {
+  @include mobile {
+    width: calc(100% - 4.8rem);
+  }
+  div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include pc {
+      width: 70.6rem;
+      padding: 4rem;
+      border-radius: 1rem;
+      box-shadow: inset 0 0 0 0.1rem $light-gray;
+      margin-bottom: 6rem;
+      p:first-child {
+        font-size: 2.4rem;
+      }
+      p:last-child {
+        font-size: 3.2rem;
+        font-weight: 500;
+        margin: 6rem 0;
+      }
+    }
+
+    @include mobile {
+      p:first-child {
+        font-size: 2rem;
+      }
+      p:last-child {
+        font-size: 2.6rem;
+        font-weight: 500;
+        margin: 4rem 0;
+      }
+    }
+  }
+}
+
+/* for FindPwReset's info text */
+.text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    text-align: center;
+    &:last-child {
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+    @include pc {
+      font-size: 2.4rem;
+    }
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}

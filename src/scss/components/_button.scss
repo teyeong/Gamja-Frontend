@@ -88,11 +88,39 @@
     height: 6rem;
     font-size: 2.8rem;
   }
+  @include mobile {
+    width: 100%;
+    height: 5rem;
+    font-size: 2rem;
+  }
 }
 
 .modal-btn {
   @include btn;
-  width: 17.4rem;
-  height: 6rem;
-  font-size: 2.8rem;
+  @include pc {
+    width: 17.4rem;
+    height: 6rem;
+    font-size: 2.8rem;
+  }
+  @include mobile {
+    width: 33vw;
+    height: 5rem;
+    font-size: 2rem;
+  }
+}
+
+/* buttons container style for InfoEdit, CompanyForm, SeniorForm */
+.btns-div {
+  @include pc {
+    display: flex;
+    justify-content: space-between;
+    width: 78.6rem;
+    margin-bottom: 8rem;
+  }
+  @include mobile {
+    width: 100%;
+    button:last-child {
+      margin-top: 1.6rem;
+    }
+  }
 }

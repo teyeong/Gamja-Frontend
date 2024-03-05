@@ -5,9 +5,11 @@ import { ModalProps } from 'props-type';
 import { InfoFormData } from 'data-type';
 import info from '../../../assets/mock/info.json';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const UserCheckModal = ({ setModal }: ModalProps) => {
   const [data, setData] = useState<Partial<InfoFormData>>({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     setData(info);
@@ -39,7 +41,7 @@ const UserCheckModal = ({ setModal }: ModalProps) => {
         />
         <Btn
           label="확인"
-          onClick={() => (window.location.href = '/my-page/edit')}
+          onClick={() => navigate('/my-page/edit')}
           styleClass="modal-btn dark-green"
         />
       </div>
