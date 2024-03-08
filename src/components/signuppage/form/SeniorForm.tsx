@@ -88,8 +88,8 @@ const SeniorForm = () => {
     setIsIdWrong(false);
   };
 
-  // signup button click event handler
-  const handleSignupClick = () => {
+  // check id or idDupleCheck or pw or pwCheck is filled
+  const isFilled = () => {
     if (!id) {
       setIsIdWrong(true);
     }
@@ -103,8 +103,21 @@ const SeniorForm = () => {
       setIsPwCheckWrong(true);
     }
 
-    if (agree && !isIdWrong && idDuplCheck && !isPwWrong && !isPwCheckWrong) {
-      navigate('/sign-up/complete');
+    if (id && idDuplCheck && pw && pwCheck) {
+      return true;
+    }
+    setIdAlert('');
+    return false;
+  };
+
+  // signup button click event handler
+  const handleSignupClick = () => {
+    if (isFilled()) {
+      if (agree && !isIdWrong && idDuplCheck && !isPwWrong && !isPwCheckWrong) {
+        navigate('/sign-up/complete');
+      } else {
+        alert('회원가입 약관 동의 및 정보 작성을 완료해 주세요.');
+      }
     } else {
       alert('회원가입 약관 동의 및 정보 작성을 완료해 주세요.');
     }
