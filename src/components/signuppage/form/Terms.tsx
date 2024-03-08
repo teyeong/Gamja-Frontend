@@ -20,7 +20,10 @@ const Terms = ({ agree, setAgree }: TermsProps) => {
 
   return (
     <div className="terms-div">
-      <div className="terms-title-div" onClick={handleOpen}>
+      <div
+        className={`terms-title-div ${agree && 'terms-title-agreed'}`}
+        onClick={handleOpen}
+      >
         <p>개인정보동의</p>
         <div>
           <div className="square gray">
@@ -28,9 +31,9 @@ const Terms = ({ agree, setAgree }: TermsProps) => {
           </div>
           <p>동의</p>
           {isOpen ? (
-            <div className="up-arrow"></div>
+            <div className={`up-arrow ${agree && 'white-arrow'}`}></div>
           ) : (
-            <div className="down-arrow"></div>
+            <div className={`down-arrow ${agree && 'white-arrow'}`}></div>
           )}
         </div>
       </div>
