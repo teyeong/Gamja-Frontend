@@ -93,4 +93,8 @@ declare module 'props-type' {
     agree: boolean;
     setAgree: React.Dispatch<React.SetStateAction<boolean>>;
   };
+
+  export type EditModalProps = {
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  };
 }

@@ -1,8 +1,14 @@
+.resume-card-wrapper {
+  display: flex;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
 .resume-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   box-shadow: inset 0 0 0 0.1rem $light-gray;
   border-radius: 1rem;
   padding: 2rem;
@@ -34,11 +40,13 @@
   margin-right: 2rem;
 }
 
-.menu-icon {
+.resume-card-menu-icon {
   width: 2.6rem;
   position: absolute;
-  top: 2rem;
-  right: 1rem;
+  top: 0rem;
+  right: -1rem;
+  padding: 2rem;
+  cursor: pointer;
 }
 
 .resume-card-contents {

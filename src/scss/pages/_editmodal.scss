@@ -1,0 +1,55 @@
+.edit-modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: $white;
+  @include pc {
+    position: absolute;
+    padding: 2rem;
+    gap: 2rem;
+    width: 13.4rem;
+    height: 19.8rem;
+    box-shadow: 0 0.1rem 0.4rem $gray;
+    right: 0rem;
+    top: 2rem;
+    z-index: 10;
+  }
+  @include mobile {
+    position: fixed;
+    padding: 2rem 4rem;
+    width: calc(100% - 12.8rem);
+    height: fit-content;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.edit-modal-text {
+  @include pc {
+    font-size: 2rem;
+  }
+  @include mobile {
+    font-size: 2.4rem;
+  }
+  font-weight: 400;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.edit-modal-text-alert {
+  @extend .edit-modal-text;
+  color: $red;
+}
+.edit-modal-text-cancel {
+  @extend .edit-modal-text;
+  color: $dark-blue;
+}
+
+.modal-division-line {
+  width: 100%;
+  margin: 2rem 0;
+  border: 1px solid $pale-gray;
+}
