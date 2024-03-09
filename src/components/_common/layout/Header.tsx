@@ -2,12 +2,15 @@ import notice from '../../../assets/icons/notice.svg';
 import hamburger from '../../../assets/icons/hamburger.svg';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import Hamburger from './Hamburger';
 
 const Header = () => {
   const isLogin = false;
   const isMobile: boolean = useMediaQuery({
     query: '(max-width:802px)',
   });
+  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   return (
     <div className="header">
@@ -21,7 +24,12 @@ const Header = () => {
             onClick={() => navigate('/notice')}
             src={notice}
           />
-          <img className="header_icon" src={hamburger} />
+          <img
+            className="header_icon"
+            src={hamburger}
+            onClick={() => setIsOpen(true)}
+          />
+          {isOpen && <Hamburger setIsOpen={setIsOpen} isLogin={isLogin} />}
         </div>
       ) : (
         <>
