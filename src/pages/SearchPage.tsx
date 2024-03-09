@@ -7,6 +7,7 @@ const SearchPage = () => {
   const isMobile: boolean = useMediaQuery({
     query: '(max-width:802px)',
   });
+  const ment = "'다시'가 선별한\n 시니어 전문가들을 만나보세요!";
   return (
     <div className="container">
       {isMobile ? (
@@ -14,7 +15,7 @@ const SearchPage = () => {
           <Title label="AI 인재 추천" />
           <Banner
             image={banner}
-            content="다시가 선별한 시니어 전문가들을 만나보세요!"
+            content={ment}
             subContent="AI 기술을 이용한 맞춤형 인재 추천 서비스"
             styleClass="banner-search"
           />
