@@ -93,4 +93,23 @@ declare module 'props-type' {
     agree: boolean;
     setAgree: React.Dispatch<React.SetStateAction<boolean>>;
   };
+
+  export type EditModalProps = {
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  };
+
+  export type HamburgerProps = {
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    isLogin: boolean;
+  };
+
+  export type HamburgerAccordionProps = {
+    title: string;
+    icon: string;
+    subMenus: {
+      subMenu: string;
+      onClick: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+    }[];
+    onTitleClick: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  };
 }

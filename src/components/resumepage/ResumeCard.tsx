@@ -1,7 +1,9 @@
 import { ResumeCardProps } from 'props-type';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import more from '../../assets/icons/more.svg';
 import verified from '../../assets/icons/verified.svg';
+import EditModal from './EditModal';
 const ResumeCard = ({
   isDefault = false,
   title,
@@ -13,10 +15,11 @@ const ResumeCard = ({
   resumeId,
 }: ResumeCardProps) => {
   const url = `/resume/edit/${resumeId}`;
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <Link to={url}>
-      <div className="resume-card">
-        <img className="menu-icon" src={more} />
+    <div className="resume-card-wrapper">
+      <div className="resume-card" onClick={() => navigate(url)}>
         {isDefault && <div className="resume-tag red-tag">기본 이력서</div>}
         <div className="resume-card-contents">
           <div className="resume-card-title">{title}</div>
@@ -38,7 +41,15 @@ const ResumeCard = ({
           )}
         </div>
       </div>
-    </Link>
+      <img
+        className="resume-card-menu-icon"
+        src={more}
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      />
+      {isOpen && <EditModal setIsOpen={setIsOpen} />}
+    </div>
   );
 };
 export default ResumeCard;

@@ -1,0 +1,127 @@
+.hamburger-container {
+  background-color: $white;
+  margin-left: 20vw;
+  width: calc(100% - 20vw);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hamburger-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 1.6rem 0 2.4rem;
+}
+
+.hamburger-close {
+  @extend .hamburger-icon;
+  position: absolute;
+  top: 6.4rem;
+  right: 0rem;
+}
+
+.hamburger-btn {
+  margin: 11.2rem 0 3rem 0;
+  font-weight: 500;
+  font-size: 2rem;
+  width: 24.6rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+}
+
+.hamburger-accordion {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0rem;
+  box-shadow: inset 0 -0.1rem 0 0 $light-gray;
+  width: 100%;
+  font-size: 2.4rem;
+  font-weight: 500;
+  position: relative;
+  .arrow {
+    @extend .hamburger-close;
+    top: 2.4rem;
+    right: 0;
+  }
+}
+
+.on {
+  transform: rotate(-180deg);
+  //transition: 1s;
+}
+
+.off {
+  transform: rotate(0deg);
+  //transition: 1s;
+}
+
+.hamburger-accordion-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hamburger-accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: $dark-gray;
+  margin: 2rem 0 0 6.4rem;
+}
+
+.hamburger-profile-container {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 8rem);
+  height: 7/2rem;
+  padding: 1rem 2rem;
+  margin: 11.2rem 0 3rem 0;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 0.1rem $light-gray;
+  .name {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 500;
+    gap: 1rem;
+    .senior {
+      color: $dark-green;
+    }
+    .business {
+      color: $dark-blue;
+    }
+  }
+}
+
+.hamburger-setting {
+  @extend .hamburger-icon;
+  position: absolute;
+  right: 2.4rem;
+}
+
+.hamburger-btn-container {
+  display: flex;
+  width: calc(100% - 4.8rem);
+  gap: 2rem;
+  position: absolute;
+  bottom: 6rem;
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 1.5rem);
+    height: 4rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0 0.1rem $light-gray;
+    font-weight: 500;
+    font-size: 2rem;
+    color: $dark-gray;
+  }
+}

@@ -16,8 +16,10 @@ const Search = () => {
   const skills2 = ['React'];
   const skills3 = ['React', 'JavaScript'];
   const commentData = [
-    { commentType: 1, comments: ['OO님', '96%'] },
+    { commentType: 1, comments: ['OO', '96'] },
     { commentType: 2, comments: ['React.js', 'Vue.js'] },
+    { commentType: 3, comments: [] },
+    { commentType: 4, comments: ['10'] },
   ];
   const tooltipTxt = `예시) 기계 산업 도면에 대한 경험 또는 교육을 받은 자`;
   return (
