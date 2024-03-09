@@ -6,6 +6,8 @@ import bulb from './../../../assets/icons/hamburger/mono-bulb.svg';
 import doc from './../../../assets/icons/hamburger/mono-doc.svg';
 import user from './../../../assets/icons/hamburger/mono-user.svg';
 import arrow from './../../../assets/icons/hamburger/arrow-down.svg';
+import setting from './../../../assets/icons/hamburger/setting.svg';
+import profile from './../../../assets/images/profile.png';
 
 const HamburgerAccordion = ({
   title,
@@ -54,6 +56,7 @@ const Hamburger = ({ setIsOpen, isLogin }: HamburgerProps) => {
     navigate(uri);
     setIsOpen(false);
   };
+  const isSenior = true;
   const infoSubMenus = [
     {
       subMenu: '시니어 전문가',
@@ -93,7 +96,7 @@ const Hamburger = ({ setIsOpen, isLogin }: HamburgerProps) => {
 
   return (
     <>
-      <div className="modal-bg-div"></div>
+      <div className="modal-bg-div" />
       <div className="hamburger-container">
         <img
           src={close}
@@ -101,16 +104,28 @@ const Hamburger = ({ setIsOpen, isLogin }: HamburgerProps) => {
           onClick={() => setIsOpen(false)}
         />
         {isLogin ? (
-          <button
-            className="hamburger-btn white"
-            onClick={() => navigate('/my-page')}
-          >
-            내 정보
-          </button>
+          <div className="hamburger-profile-container">
+            <img className="resume-card-profile" src={profile} />
+            <div className="name">
+              <div>김다시 님</div>
+              {isSenior ? (
+                <div className="senior">시니어 회원</div>
+              ) : (
+                <div className="business">기업 회원</div>
+              )}
+            </div>
+            <img
+              className="hamburger-setting"
+              src={setting}
+              onClick={() => {
+                handleNavigate('my-page');
+              }}
+            />
+          </div>
         ) : (
           <button
             className="hamburger-btn white"
-            onClick={() => navigate('/sign-in')}
+            onClick={() => handleNavigate('/sign-in')}
           >
             로그인/회원가입
           </button>
@@ -139,6 +154,12 @@ const Hamburger = ({ setIsOpen, isLogin }: HamburgerProps) => {
             handleNavigate('search');
           }}
         />
+        {isLogin && (
+          <div className="hamburger-btn-container">
+            <div className="btn">로그아웃</div>
+            <div className="btn">회원탈퇴</div>
+          </div>
+        )}
       </div>
     </>
   );
