@@ -23,7 +23,7 @@ const SignInForm = ({ user }: UserProps) => {
   const [pw, setPw] = useState('');
 
   // check id or pw is filled
-  const idFilled = () => {
+  const isFilled = () => {
     if (!id) {
       setAlertText('아이디를 입력해 주세요.');
       return false;
@@ -38,7 +38,7 @@ const SignInForm = ({ user }: UserProps) => {
 
   // signin button click event handler
   const handleSubmit = () => {
-    if (idFilled()) {
+    if (isFilled()) {
       // API connection is required
       if (user === 'senior') {
         console.log('시니어 로그인: ' + id + ', ' + pw);
