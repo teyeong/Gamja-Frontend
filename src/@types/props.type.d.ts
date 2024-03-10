@@ -60,6 +60,7 @@ declare module 'props-type' {
     isVerified?: boolean;
     resumeId: number;
     title: string;
+    jobGroup: string;
     jobName: string;
     date: string;
     workType: string[];

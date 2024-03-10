@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ResumeLongCard from './ResumeLongCard';
-import Filter from './Filter';
 import { Select, Tooltip } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import filter from '../../assets/icons/search/filter.svg';
@@ -99,6 +98,7 @@ const Search = () => {
         <ResumeLongCard
           title="김**"
           careerYear={1}
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
           workType={workType}
@@ -111,6 +111,7 @@ const Search = () => {
         <ResumeLongCard
           title="김**"
           careerYear={1}
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
           workType={workType}
@@ -124,6 +125,7 @@ const Search = () => {
         <ResumeLongCard
           title="김**"
           careerYear={1}
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
           workType={workType}
