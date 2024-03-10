@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import ResumeLongCard from './ResumeLongCard';
+import Filter from './Filter';
 import { Select, Tooltip } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import filter from '../../assets/icons/search/filter.svg';
 import info from '../../assets/icons/search/info.svg';
 import miniSearch from '../../assets/icons/search/mini-search.svg';
@@ -31,6 +33,8 @@ const Search = () => {
     '비즈니스 영어가 가능하고 제약회사 경험이 있는 사람',
     '해외 영업팀 근무 경험이 있으면서 영어에 능통하고 소통이 원활한 5년차 이상의 전문 통역가',
   ];
+  const navigate = useNavigate();
+
   return (
     <div className="sub-container">
       <div className="search-title-container">
@@ -40,7 +44,12 @@ const Search = () => {
             <img src={info} />
           </Tooltip>
         </div>
-        <div className="filter-container white">
+        <div
+          className="filter-container white"
+          onClick={() => {
+            navigate('filter');
+          }}
+        >
           <img src={filter} />
         </div>
       </div>
