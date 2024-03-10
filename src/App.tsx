@@ -22,6 +22,7 @@ import FindIdResult from 'components/findidpage/FindIdResult';
 import FindPwPage from 'pages/FindPwPage';
 import FindPwForm from 'components/findpwpage/FindPwForm';
 import FindPwReset from 'components/findpwpage/FindPwReset';
+import SearchFilterPage from 'pages/SearchFilterPage';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path="/resume" element={<ResumeListPage />} />
             <Route path="/resume/edit/:resumeId" element={<ResumeEditPage />} />
             <Route path="/search" element={<SearchPage />} />
+            <Route path="search/filter" element={<SearchFilterPage />} />
             <Route path="/find/id" element={<FindIdPage />}>
               <Route path="form" element={<FindIdForm />} />
               <Route path="result" element={<FindIdResult />} />
