@@ -61,13 +61,13 @@ const Hamburger = ({ setIsOpen, isLogin }: HamburgerProps) => {
     {
       subMenu: '시니어 전문가',
       onClick: () => {
-        handleNavigate('about-us');
+        handleNavigate('about-us/senior');
       },
     },
     {
       subMenu: '기업 사용자',
       onClick: () => {
-        handleNavigate('about-us');
+        handleNavigate('about-us/company');
       },
     },
   ];
