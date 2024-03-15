@@ -23,6 +23,9 @@ import FindPwPage from 'pages/FindPwPage';
 import FindPwForm from 'components/findpwpage/FindPwForm';
 import FindPwReset from 'components/findpwpage/FindPwReset';
 import SearchFilterPage from 'pages/SearchFilterPage';
+import AboutUsPage from 'pages/AboutUsPage';
+import SeniorTab from 'components/aboutuspage/SeniorTab';
+import CompanyTab from 'components/aboutuspage/CompanyTab';
 
 function App() {
   return (
@@ -52,6 +55,10 @@ function App() {
             <Route path="/find/pw" element={<FindPwPage />}>
               <Route path="form" element={<FindPwForm />} />
               <Route path="reset" element={<FindPwReset />} />
+            </Route>
+            <Route path="about-us" element={<AboutUsPage />}>
+              <Route path="senior" element={<SeniorTab />} />
+              <Route path="company" element={<CompanyTab />} />
             </Route>
           </Routes>
         </Layout>
