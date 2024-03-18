@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SignInForm from './SignInForm';
 
 const SignInTab = () => {
-  const [activeIndex, setactiveIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const tabType = [
     { label: '시니어 회원', user: 'senior' },
     { label: '기업 회원', user: 'company' },
@@ -14,7 +14,7 @@ const SignInTab = () => {
           <div
             key={index}
             className={`${activeIndex === index && 'active'}`}
-            onClick={() => setactiveIndex(index)}
+            onClick={() => setActiveIndex(index)}
           >
             {tab.label}
           </div>
