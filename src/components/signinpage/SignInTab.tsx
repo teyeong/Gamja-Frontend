@@ -8,7 +8,7 @@ const SignInTab = () => {
     { label: '기업 회원', user: 'company' },
   ];
   return (
-    <div className="signin-tab">
+    <div className="tab-div">
       <div className="tab-wrapper">
         {tabType.map((tab, index) => (
           <div
