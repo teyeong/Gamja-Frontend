@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "(주)개발코리아",
+    "src": "https://cdn.vectorstock.com/i/preview-1x/17/46/development-business-logo-template-vector-31471746.jpg",
+    "type": "채용 제안",
+    "isRead": false
+  },
+  {
+    "id": 2,
+    "name": "서울시니어센터",
+    "src": "https://goldenjob.or.kr/images/common/logo.jpg",
+    "type": "채용 제안",
+    "isRead": false
+  },
+  {
+    "id": 3,
+    "name": "이화여자대학교",
+    "src": "https://i.namu.wiki/i/ayDlxOs9HFBzgePxztJKfSDiUuNd8B-9PcWMbTxBhr4kwAEqbHfVo9Cuahbfi-cLKW2VO3lJ47Wi52SBl-iaQg.svg",
+    "type": "계약서 체결",
+    "isRead": true
+  },
+  {
+    "id": 4,
+    "name": "서울시청",
+    "src": "https://mblogthumb-phinf.pstatic.net/MjAxOTEyMDVfMTY2/MDAxNTc1NTA1MTI0MDU4.VCKXBYxcwd6OpvOaoHzUo34Z4aLpzt_oa7tmmRbQQcog.Lt9xPTDkNwNiUDxE6yoMzNO_kLAvKJm8OLwGjZuUGEAg.JPEG.appcomo/Emblem%EC%9D%91%EC%9A%A9%ED%98%95-1.jpg?type=w800",
+    "type": "채용 취소",
+    "isRead": false
+  }
+]

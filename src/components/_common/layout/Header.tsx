@@ -49,7 +49,11 @@ const Header = () => {
           </div>
           {isLogin ? (
             <div style={{ display: 'flex' }}>
-              <img className="header_icon" src={notice} />
+              <img
+                className="header_icon"
+                src={notice}
+                onClick={() => navigate('/notice')}
+              />
               <button
                 className="header_btn"
                 onClick={() => navigate('/my-page')}

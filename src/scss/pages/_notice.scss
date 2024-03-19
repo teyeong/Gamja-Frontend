@@ -1,0 +1,70 @@
+@import '../abstracts/colors';
+@import '../abstracts/mixin';
+
+/* NoticeList style */
+.noticelist-div {
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    width: calc(100% - 4.8rem);
+  }
+}
+
+/* NoticeItem style */
+.noticeitem-div {
+  display: flex;
+  flex-direction: column;
+  background-color: $pale-gray;
+  padding: 2rem;
+  border-radius: 1rem;
+  @include pc {
+    width: 54.2rem;
+    margin-bottom: 3rem;
+  }
+  @include mobile {
+    margin-bottom: 2rem;
+  }
+}
+
+/* NoticeItem company's information div style */
+.noticeitem-info-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  p {
+    width: 100%;
+    margin-left: 2rem;
+    font-weight: 600;
+    word-wrap: break-word;
+    @include pc {
+      font-size: 2.8rem;
+    }
+    @include mobile {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+/* NoticeItem company's profile img style */
+.noticeitem-img-div {
+  background-color: $white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  @include pc {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  @include mobile {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

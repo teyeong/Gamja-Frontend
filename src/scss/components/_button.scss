@@ -124,3 +124,17 @@
     }
   }
 }
+
+/* NoticeItem button style */
+.ntc-btn {
+  @include btn;
+  width: 100%;
+  @include pc {
+    height: 6rem;
+    font-size: 2.8rem;
+  }
+  @include mobile {
+    height: 5rem;
+    font-size: 2rem;
+  }
+}
