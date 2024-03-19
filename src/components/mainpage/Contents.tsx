@@ -11,7 +11,7 @@ const Contents = () => {
     <>
       <div className="button-div">
         <div className="contents-wrapper">
-          <Link to="/about-us">
+          <Link to="/about-us/senior">
             <Content
               title="다시"
               content="서비스 소개 바로가기"
