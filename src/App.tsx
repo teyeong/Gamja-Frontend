@@ -26,6 +26,7 @@ import SearchFilterPage from 'pages/SearchFilterPage';
 import AboutUsPage from 'pages/AboutUsPage';
 import SeniorTab from 'components/aboutuspage/SeniorTab';
 import CompanyTab from 'components/aboutuspage/CompanyTab';
+import NoticePage from 'pages/NoticePage';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
               <Route path="senior" element={<SeniorTab />} />
               <Route path="company" element={<CompanyTab />} />
             </Route>
+            <Route path="/notice" element={<NoticePage />} />
           </Routes>
         </Layout>
       </RecoilRoot>

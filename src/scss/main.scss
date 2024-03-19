@@ -5,18 +5,19 @@
 @import 'base/reset';
 
 @import 'components/arrow';
+@import 'components/banner_btn';
+@import 'components/banner';
 @import 'components/button';
 @import 'components/infoForm';
 @import 'components/input';
 @import 'components/modal';
 @import 'components/picture';
 @import 'components/profile';
-@import 'components/title';
-@import 'components/tag';
-@import 'components/banner';
-@import 'components/banner_btn';
 @import 'components/resume_card';
 @import 'components/select';
+@import 'components/tab';
+@import 'components/tag';
+@import 'components/title';
 
 @import 'layout/footer';
 @import 'layout/header';
@@ -24,13 +25,14 @@
 @import 'layout/hamburger';
 
 @import 'pages/aboutus';
+@import 'pages/editmodal';
 @import 'pages/findpage';
 @import 'pages/infoedit';
 @import 'pages/main';
 @import 'pages/mypage';
-@import 'pages/signin';
-@import 'pages/signup';
+@import 'pages/notice';
 @import 'pages/resume';
 @import 'pages/search';
-@import 'pages/editmodal';
 @import 'pages/searchfilter';
+@import 'pages/signin';
+@import 'pages/signup';
