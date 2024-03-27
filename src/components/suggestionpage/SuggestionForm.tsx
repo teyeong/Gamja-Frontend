@@ -6,33 +6,7 @@ import Label from 'components/_common/Label';
 import Btn from 'components/_common/Btn';
 
 const SuggestionForm = () => {
-  const [workType, setWorkType] = useState<string[]>([]);
   const [selectedJob, setSelectedJob] = useState('직무');
-
-  const isActiveWorkType = (type: string) => {
-    if (workType.includes(type)) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  const handleWorkType = (type: string) => {
-    if (workType.includes(type)) {
-      // remove type
-      const newWorkType = workType.filter((item) => {
-        if (item === type) {
-          return false;
-        } else {
-          return true;
-        }
-      });
-      setWorkType(newWorkType);
-    } else {
-      // add type
-      setWorkType([...workType, type]);
-    }
-  };
 
   const onAreaChange = () => {
     setSelectedJob('직무');
@@ -51,24 +25,6 @@ const SuggestionForm = () => {
       {/* add senior's profile later */}
       <Subtitle label="제안 내용" />
       <div className="resume-input-container input-div">
-        <div style={{ position: 'relative' }}>
-          <Label label="희망 고용 형태" isRequired={true} />
-          <div className="info-text">복수선택 가능</div>
-          <div className="work-type-container">
-            <button
-              className={`work-type-btn ${isActiveWorkType('멘토링') ? 'dark-blue' : 'white-blue'}`}
-              onClick={() => handleWorkType('멘토링')}
-            >
-              멘토링
-            </button>
-            <button
-              className={`work-type-btn ${isActiveWorkType('프로젝트 계약직') ? 'dark-blue' : 'white-blue'}`}
-              onClick={() => handleWorkType('프로젝트 계약직')}
-            >
-              프로젝트 계약직
-            </button>
-          </div>
-        </div>
         <div>
           <Label label="근무 기간" isRequired={true} />
           <div className="select-container">
