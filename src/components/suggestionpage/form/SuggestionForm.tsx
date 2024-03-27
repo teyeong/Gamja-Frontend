@@ -44,19 +44,19 @@ const SuggestionForm = () => {
         </div>
         <div>
           <Label label="제안 급여" isRequired={true} />
-          <div className="suggest-price-div">
+          <div className="suggest-form-price-div">
             <p>전문가님의 희망 급여</p>
             <p>30,000원 - 50,000원</p>
-            <div className="suggest-price-input light-gray">
+            <div className="suggest-form-price-input light-gray">
               <input />
               <p>원</p>
             </div>
-            <p className="suggest-price-notice">
+            <p className="suggest-form-price-notice">
               근무 기간을 고려해서 책정해 주세요.
             </p>
           </div>
         </div>
-        <div className="suggest-jd-div">
+        <div className="suggest-form-jd-div">
           <Label label="업무 소개" isRequired={true} />
           <textarea
             className="resume-text-area"

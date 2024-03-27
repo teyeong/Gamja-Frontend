@@ -1,8 +1,9 @@
 @import '../abstracts/colors';
 @import '../abstracts/mixin';
 
+/* SuggetionForm style */
 /* style for price suggestion */
-.suggest-price-div {
+.suggest-form-price-div {
   @include pc {
     width: 100%;
     font-size: 2.4rem;
@@ -13,11 +14,11 @@
   }
 }
 
-.suggest-price-notice {
+.suggest-form-price-notice {
   color: $dark-gray;
 }
 
-.suggest-price-input {
+.suggest-form-price-input {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,7 +46,7 @@
 }
 
 /* style for job description */
-.suggest-jd-div {
+.suggest-form-jd-div {
   textarea {
     &:focus {
       box-shadow: inset 0 0 0 0.1rem $dark-blue;
