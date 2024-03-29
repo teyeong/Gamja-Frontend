@@ -114,4 +114,14 @@ declare module 'props-type' {
     }[];
     onTitleClick: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   };
+
+  export type NoticeListProps = {
+    isOld: boolean;
+  };
+
+  export type NoticeItemProps = {
+    name: string;
+    src: string;
+    type: string;
+  };
 }

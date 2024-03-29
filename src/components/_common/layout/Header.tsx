@@ -34,7 +34,10 @@ const Header = () => {
       ) : (
         <>
           <div className="header_txt_container">
-            <div className="header_txt" onClick={() => navigate('/about-us')}>
+            <div
+              className="header_txt"
+              onClick={() => navigate('/about-us/senior')}
+            >
               서비스 소개
             </div>
             <div className="header_txt" onClick={() => navigate('/resume')}>
@@ -46,7 +49,11 @@ const Header = () => {
           </div>
           {isLogin ? (
             <div style={{ display: 'flex' }}>
-              <img className="header_icon" src={notice} />
+              <img
+                className="header_icon"
+                src={notice}
+                onClick={() => navigate('/notice')}
+              />
               <button
                 className="header_btn"
                 onClick={() => navigate('/my-page')}

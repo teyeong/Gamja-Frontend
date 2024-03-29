@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import SignInForm from './SignInForm';
+import NoticeList from './NoticeList';
 
-const SignInTab = () => {
+const NoticeTab = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const tabType = [
-    { label: '시니어 회원', user: 'senior' },
-    { label: '기업 회원', user: 'company' },
+    { label: '새로운 알림', isOld: false },
+    { label: '지난 알림', isOld: true },
   ];
   return (
     <div className="tab-div">
@@ -20,9 +20,9 @@ const SignInTab = () => {
           </div>
         ))}
       </div>
-      <SignInForm user={tabType[activeIndex].user} />
+      <NoticeList isOld={tabType[activeIndex].isOld} />
     </div>
   );
 };
 
-export default SignInTab;
+export default NoticeTab;
