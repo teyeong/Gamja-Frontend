@@ -79,8 +79,9 @@ declare module 'props-type' {
   };
 
   export type PaySliderProps = {
-    isHour?: boolean;
+    isPay?: boolean;
     isCareer?: boolean;
+    isDuration?: boolean;
   };
 
   export type BannerProps = {

@@ -182,3 +182,11 @@
     font-size: 2.4rem;
   }
 }
+
+.resume-tab {
+  @extend .tab-wrapper;
+  margin-bottom: 8rem !important;
+  @include pc {
+    width: 78.6rem !important;
+  }
+}
