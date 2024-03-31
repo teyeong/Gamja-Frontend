@@ -71,6 +71,10 @@ declare module 'props-type' {
     recommendComments?: { commentType: number; comments: string[] }[];
   };
 
+  export type ResumeEditProps = {
+    isSubmitted?: boolean;
+  };
+
   export type RecordProps = {
     isMini?: boolean;
     needDetail?: boolean;

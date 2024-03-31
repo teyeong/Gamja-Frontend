@@ -1,6 +1,6 @@
 import BannerBtn from './BannerBtn';
 import ResumeCard from './ResumeCard';
-import resume from '../../assets/icons/resume.svg';
+import resume from '../../assets/icons/resume/resume.svg';
 import { useNavigate } from 'react-router-dom';
 
 const ResumeList = () => {

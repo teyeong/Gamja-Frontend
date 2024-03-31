@@ -7,10 +7,9 @@ import BannerBtn from './BannerBtn';
 import Record from './Record';
 import UploadBtn from './UploadBtn';
 import PaySlider from '../_common/PaySlider';
-import Input from 'components/_common/Input';
 import Label from 'components/_common/Label';
-import resume from '../../assets/icons/resume.svg';
-import bulb from '../../assets/icons/bulb.svg';
+import resume from '../../assets/icons/resume/resume.svg';
+import bulb from '../../assets/icons/resume/bulb.svg';
 
 const ResumeInput = () => {
   const [selectedArea, setSelectedArea] = useState('직군');
@@ -43,8 +42,6 @@ const ResumeInput = () => {
     { value: '상주 근무 및 원격 근무', label: '상주 근무 및 원격 근무' },
   ];
 
-  const isSubmitted = true;
-
   return (
     <>
       <div className="resume-banner-container">
@@ -62,20 +59,6 @@ const ResumeInput = () => {
         />
       </div>
       <div className="resume-input-container input-div">
-        <Input
-          label="이력서 제목"
-          isRequired={true}
-          placeholder="제목을 입력하세요."
-          isAlertRequired={false}
-        />
-        <div>
-          <Label label="자기소개" />
-          <textarea
-            className="resume-text-area"
-            name="자기소개"
-            placeholder="자기소개를 입력하세요."
-          />
-        </div>
         <div>
           <Label label="직군 및 직무" isRequired={true} />
           <div className="select-container">
@@ -161,29 +144,6 @@ const ResumeInput = () => {
             onChange={onAreaChange}
             options={commuteTypeData}
           />
-        </div>
-        <div className="work-type-container">
-          <button
-            className={`resume-submit-btn ${'white'}`}
-            onClick={() => navigate('/resume')}
-          >
-            이력서 임시 저장
-          </button>
-          {isSubmitted ? (
-            <button
-              className={`resume-submit-btn ${'dark-green'}`}
-              onClick={() => navigate('/resume')}
-            >
-              인재풀 재등록
-            </button>
-          ) : (
-            <button
-              className={`resume-submit-btn ${'dark-green'}`}
-              onClick={() => navigate('/resume')}
-            >
-              인재풀 등록
-            </button>
-          )}
         </div>
       </div>
     </>
