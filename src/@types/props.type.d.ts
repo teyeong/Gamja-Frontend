@@ -59,15 +59,28 @@ declare module 'props-type' {
     isDefault?: boolean;
     isVerified?: boolean;
     resumeId: number;
-    title: string;
+    title?: string; // 이력서 제목
+    jobGroup: string;
     jobName: string;
-    date: string;
-    workType: string[];
-    skills?: string[];
+    date?: string; // 이력서 최종 수정일
+    careerYear: number;
     commuteType: string;
-    profileImage?: string;
-    careerYear?: number;
+  };
+
+  export type ResumeLongCardProps = ResumeCardProps & {
+    seniorName: string;
+    profileImage: string;
+    skills?: string[];
     recommendComments?: { commentType: number; comments: string[] }[];
+    needSubinfo?: boolean;
+    durationStart?: number;
+    durationEnd?: number;
+    payStart?: number;
+    payEnd?: number;
+  };
+
+  export type ResumeEditProps = {
+    isSubmitted?: boolean;
   };
 
   export type RecordProps = {
@@ -78,8 +91,9 @@ declare module 'props-type' {
   };
 
   export type PaySliderProps = {
-    isHour?: boolean;
+    isPay?: boolean;
     isCareer?: boolean;
+    isDuration?: boolean;
   };
 
   export type BannerProps = {

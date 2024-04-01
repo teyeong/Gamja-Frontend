@@ -1,0 +1,25 @@
+.resume-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  @include pc {
+    margin-bottom: 4rem;
+  }
+  @include mobile {
+    margin-bottom: 2rem;
+  }
+}
+.resume-detail-info {
+  display: flex;
+  width: 100%;
+  .name {
+    @extend .resume-title-container;
+    margin: 0;
+  }
+  .profile {
+    @extend .resume-card-profile;
+    width: 6rem;
+    height: 6rem;
+  }
+}

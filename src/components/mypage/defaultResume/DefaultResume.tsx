@@ -2,7 +2,6 @@ import Btn from 'components/_common/Btn';
 import ResumeCard from 'components/resumepage/ResumeCard';
 
 const DefaultResume = () => {
-  const workType = ['강연', '멘토링'];
   return (
     <div className="defaultResume-div">
       <div className="mypage-flexdiv">
@@ -17,9 +16,10 @@ const DefaultResume = () => {
         <ResumeCard
           isDefault={true}
           title="이력서 1"
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
-          workType={workType}
+          careerYear={10}
           commuteType="원격"
           isVerified={true}
           resumeId={1}

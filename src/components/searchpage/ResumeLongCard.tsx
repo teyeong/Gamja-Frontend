@@ -1,23 +1,21 @@
-import { ResumeCardProps } from 'props-type';
+import { ResumeLongCardProps } from 'props-type';
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import verified from '../../assets/icons/verified.svg';
 import check from '../../assets/icons/check.svg';
 const ResumeLongCard = ({
-  isDefault = false,
   isVerified = false,
-  title,
+  seniorName,
+  jobGroup,
   jobName,
-  date,
-  workType,
   skills = [],
   commuteType,
   resumeId,
   profileImage,
   careerYear,
   recommendComments = [],
-}: ResumeCardProps) => {
-  const url = `/resume/detail/${resumeId}`;
+}: ResumeLongCardProps) => {
+  const url = `/search/detail/${resumeId}`;
   const navigate = useNavigate();
   const isMobile: boolean = useMediaQuery({
     query: '(max-width:802px)',
@@ -34,26 +32,20 @@ const ResumeLongCard = ({
         <img className="resume-card-profile" src={profileImage} />
         <div className="resume-card-contents">
           <div className="resume-title-container">
-            <div className="resume-card-title">{title}</div>
+            <div className="resume-card-title">{seniorName}</div>
             <div className="resume-card-tags">
               <div className="resume-tag blue-tag">{commuteType}</div>
+              <div className="resume-tag blue-tag">{careerYear}년차</div>
               {isVerified && (
                 <div className="resume-tag blue-tag">
                   <img src={verified} />
-                  경력 검증
+                  검증됨
                 </div>
               )}
             </div>
           </div>
           <div className="resume-card-job">
-            {jobName} ({careerYear}년차)
-          </div>
-          <div className="resume-card-tags">
-            {workType.map((wt, index) => (
-              <div className="resume-tag green-tag" key={index}>
-                {wt}
-              </div>
-            ))}
+            {jobGroup} {`>`} {jobName}
           </div>
           {isMobile ? (
             <div className="resume-card-tags">
@@ -98,7 +90,7 @@ const ResumeLongCard = ({
                 {cm.commentType == 3 && <>희망하는 예산 범위와 일치해요!</>}
                 {cm.commentType == 4 && (
                   <>
-                    <span>{cm.comments[0]}</span>년 경력자예요!
+                    <span>{cm.comments[0]}</span>년차 경력자예요!
                   </>
                 )}
               </div>
