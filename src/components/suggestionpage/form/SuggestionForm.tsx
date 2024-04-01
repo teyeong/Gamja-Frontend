@@ -4,8 +4,9 @@ import { Select } from 'antd';
 import Subtitle from 'components/_common/Subtitle';
 import Label from 'components/_common/Label';
 import Btn from 'components/_common/Btn';
+import { SuggestionProps } from 'props-type';
 
-const SuggestionForm = () => {
+const SuggestionForm = ({ resumeId, isEdit }: SuggestionProps) => {
   const [selectedJob, setSelectedJob] = useState('직무');
 
   const onAreaChange = () => {
@@ -23,8 +24,28 @@ const SuggestionForm = () => {
   return (
     <div className="sub-container">
       {/* add senior's profile later */}
+      {isEdit && (
+        <div style={{ marginBottom: '4rem' }}>
+          <Btn
+            label="채용 취소하기"
+            onClick={() => console.log('채용 취소 클릭')}
+            styleClass="longer-btn dark-blue"
+          />
+        </div>
+      )}
       <Subtitle label="제안 내용" />
       <div className="resume-input-container input-div">
+        <div>
+          <Label label="근무 형태" isRequired={true} />
+          <div className="select-container">
+            <Select
+              className="select-long"
+              defaultValue="근무 형태"
+              onChange={onAreaChange}
+              options={startDate}
+            />
+          </div>
+        </div>
         <div>
           <Label label="근무 기간" isRequired={true} />
           <div className="select-container">
@@ -51,12 +72,12 @@ const SuggestionForm = () => {
               <input />
               <p>원</p>
             </div>
-            <p className="suggest-form-price-notice">
+            <p className="suggest-notice-p">
               근무 기간을 고려해서 책정해 주세요.
             </p>
           </div>
         </div>
-        <div className="suggest-form-jd-div">
+        <div className="suggest-form-textarea-div">
           <Label label="업무 소개" isRequired={true} />
           <textarea
             className="resume-text-area"
@@ -71,11 +92,19 @@ const SuggestionForm = () => {
           onClick={() => window.location.replace('/resume/detail/:resumeId')}
           styleClass="abreast-btn white-blue"
         />
-        <Btn
-          label="채용 제안"
-          onClick={() => window.location.replace('/resume/detail/:resumeId')}
-          styleClass="abreast-btn dark-blue"
-        />
+        {isEdit ? (
+          <Btn
+            label="수정"
+            onClick={() => window.location.replace('/resume/detail/:resumeId')}
+            styleClass="abreast-btn dark-blue"
+          />
+        ) : (
+          <Btn
+            label="채용 제안"
+            onClick={() => window.location.replace('/resume/detail/:resumeId')}
+            styleClass="abreast-btn dark-blue"
+          />
+        )}
       </div>
     </div>
   );
