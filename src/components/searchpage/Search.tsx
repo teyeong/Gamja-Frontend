@@ -17,7 +17,6 @@ const Search = () => {
     { value: '리뷰 높은순', label: '리뷰 높은순' },
     { value: '업데이트순', label: '업데이트순' },
   ];
-  const workType = ['강연', '멘토링'];
   const skills = ['React', 'JavaScript', 'TypeScript'];
   const skills2 = ['React'];
   const skills3 = ['React', 'JavaScript'];
@@ -96,12 +95,11 @@ const Search = () => {
       </div>
       <div className="resume-long-card-container">
         <ResumeLongCard
-          title="김**"
-          careerYear={1}
+          seniorName="김**"
+          careerYear={10}
           jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
-          workType={workType}
           skills={skills}
           commuteType="원격"
           isVerified={true}
@@ -109,12 +107,11 @@ const Search = () => {
           profileImage={profile}
         />
         <ResumeLongCard
-          title="김**"
+          seniorName="김**"
           careerYear={1}
           jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
-          workType={workType}
           skills={skills2}
           commuteType="원격"
           isVerified={true}
@@ -123,12 +120,11 @@ const Search = () => {
           recommendComments={commentData}
         />
         <ResumeLongCard
-          title="김**"
+          seniorName="김**"
           careerYear={1}
           jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
-          workType={workType}
           skills={skills3}
           commuteType="원격"
           isVerified={true}
