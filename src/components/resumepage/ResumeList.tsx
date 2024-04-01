@@ -4,7 +4,6 @@ import resume from '../../assets/icons/resume/resume.svg';
 import { useNavigate } from 'react-router-dom';
 
 const ResumeList = () => {
-  const workType = ['강연', '멘토링'];
   const navigate = useNavigate();
   return (
     <div className="sub-container">
@@ -22,28 +21,28 @@ const ResumeList = () => {
           jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
-          workType={workType}
           commuteType="원격"
           isVerified={true}
           resumeId={1}
+          careerYear={10}
         />
         <ResumeCard
           title="이력서 2"
           jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
-          workType={workType}
           commuteType="원격"
           resumeId={2}
+          careerYear={10}
         />
         <ResumeCard
           title="이력서 3"
           jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
-          workType={workType}
           commuteType="원격"
           resumeId={3}
+          careerYear={10}
         />
       </div>
     </div>
