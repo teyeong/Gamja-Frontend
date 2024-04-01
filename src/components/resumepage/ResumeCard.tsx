@@ -7,6 +7,7 @@ import EditModal from './EditModal';
 const ResumeCard = ({
   isDefault = false,
   title,
+  jobGroup,
   jobName,
   date,
   workType,
@@ -23,7 +24,9 @@ const ResumeCard = ({
         {isDefault && <div className="resume-tag red-tag">기본 이력서</div>}
         <div className="resume-card-contents">
           <div className="resume-card-title">{title}</div>
-          <div className="resume-card-job">{jobName}</div>
+          <div className="resume-card-job">
+            {jobGroup} {`>`} {jobName}
+          </div>
           <div className="resume-card-date">{date}</div>
         </div>
         <div className="resume-card-tags">

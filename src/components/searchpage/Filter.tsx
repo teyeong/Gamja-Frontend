@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Title from 'components/_common/Title';
 import Label from 'components/_common/Label';
 import SelectTag from '../resumepage/SelectTag';
-import PaySlider from 'components/resumepage/PaySlider';
+import PaySlider from 'components/_common/PaySlider';
 import close from '../../assets/icons/hamburger/close.svg';
 
 const Filter = () => {
@@ -108,8 +108,7 @@ const Filter = () => {
         <div>
           <Label label="급여" />
           <div className="slider-container">
-            <PaySlider isHour={true} />
-            <PaySlider isHour={false} />
+            <PaySlider isPay={true} />
           </div>
         </div>
         <button

@@ -7,6 +7,7 @@ const ResumeLongCard = ({
   isDefault = false,
   isVerified = false,
   title,
+  jobGroup,
   jobName,
   date,
   workType,
@@ -17,7 +18,7 @@ const ResumeLongCard = ({
   careerYear,
   recommendComments = [],
 }: ResumeCardProps) => {
-  const url = `/resume/detail/${resumeId}`;
+  const url = `/search/detail/${resumeId}`;
   const navigate = useNavigate();
   const isMobile: boolean = useMediaQuery({
     query: '(max-width:802px)',
@@ -37,6 +38,7 @@ const ResumeLongCard = ({
             <div className="resume-card-title">{title}</div>
             <div className="resume-card-tags">
               <div className="resume-tag blue-tag">{commuteType}</div>
+              <div className="resume-tag blue-tag">{careerYear}년</div>
               {isVerified && (
                 <div className="resume-tag blue-tag">
                   <img src={verified} />
@@ -46,7 +48,7 @@ const ResumeLongCard = ({
             </div>
           </div>
           <div className="resume-card-job">
-            {jobName} ({careerYear}년차)
+            {jobGroup} {`>`} {jobName}
           </div>
           <div className="resume-card-tags">
             {workType.map((wt, index) => (
