@@ -10,10 +10,10 @@ const ResumeCard = ({
   jobGroup,
   jobName,
   date,
-  workType,
   commuteType,
   isVerified = false,
   resumeId,
+  careerYear,
 }: ResumeCardProps) => {
   const url = `/resume/edit/${resumeId}`;
   const navigate = useNavigate();
@@ -30,12 +30,8 @@ const ResumeCard = ({
           <div className="resume-card-date">{date}</div>
         </div>
         <div className="resume-card-tags">
-          {workType.map((wt, index) => (
-            <div className="resume-tag green-tag" key={index}>
-              {wt}
-            </div>
-          ))}
           <div className="resume-tag blue-tag">{commuteType}</div>
+          <div className="resume-tag blue-tag">{careerYear}년차</div>
           {isVerified && (
             <div className="resume-tag blue-tag">
               <img src={verified} />
