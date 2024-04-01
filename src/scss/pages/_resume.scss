@@ -23,7 +23,7 @@
     margin-bottom: 8rem;
   }
   @include mobile {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -143,11 +143,13 @@
   margin-top: 0;
   @include pc {
     gap: 1rem 3rem;
+    margin-top: 8rem;
   }
   @include mobile {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 4rem;
   }
 }
 
@@ -176,9 +178,21 @@
   @extend .work-type-btn;
   @include pc {
     font-size: 3.2rem;
-    margin-top: 4rem;
+  }
+}
+
+.resume-tab-div {
+  @extend .tab-div;
+  @include pc {
+    .tab-wrapper {
+      width: 78.6rem;
+      margin-bottom: 8rem;
+    }
   }
   @include mobile {
-    font-size: 2.4rem;
+    width: 100%;
+    .tab-wrapper {
+      margin-bottom: 4rem;
+    }
   }
 }

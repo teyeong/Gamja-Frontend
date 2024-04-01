@@ -1,0 +1,14 @@
+.resume-detail-info {
+  display: flex;
+  width: 100%;
+  .name {
+    @extend .resume-title-container;
+    margin: 0;
+  }
+  margin-bottom: 4rem;
+  .profile {
+    @extend .resume-card-profile;
+    width: 6rem;
+    height: 6rem;
+  }
+}

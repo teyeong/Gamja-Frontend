@@ -1,6 +1,6 @@
 import BannerBtn from './BannerBtn';
 import ResumeCard from './ResumeCard';
-import resume from '../../assets/icons/resume.svg';
+import resume from '../../assets/icons/resume/resume.svg';
 import { useNavigate } from 'react-router-dom';
 
 const ResumeList = () => {
@@ -19,6 +19,7 @@ const ResumeList = () => {
         <ResumeCard
           isDefault={true}
           title="이력서 1"
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
           workType={workType}
@@ -28,6 +29,7 @@ const ResumeList = () => {
         />
         <ResumeCard
           title="이력서 2"
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
           workType={workType}
@@ -36,6 +38,7 @@ const ResumeList = () => {
         />
         <ResumeCard
           title="이력서 3"
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
           workType={workType}

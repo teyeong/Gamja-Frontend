@@ -60,6 +60,7 @@ declare module 'props-type' {
     isVerified?: boolean;
     resumeId: number;
     title: string;
+    jobGroup: string;
     jobName: string;
     date: string;
     workType: string[];
@@ -70,6 +71,10 @@ declare module 'props-type' {
     recommendComments?: { commentType: number; comments: string[] }[];
   };
 
+  export type ResumeEditProps = {
+    isSubmitted?: boolean;
+  };
+
   export type RecordProps = {
     isMini?: boolean;
     needDetail?: boolean;
@@ -78,8 +83,9 @@ declare module 'props-type' {
   };
 
   export type PaySliderProps = {
-    isHour?: boolean;
+    isPay?: boolean;
     isCareer?: boolean;
+    isDuration?: boolean;
   };
 
   export type BannerProps = {

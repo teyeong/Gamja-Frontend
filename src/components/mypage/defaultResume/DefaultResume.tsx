@@ -17,6 +17,7 @@ const DefaultResume = () => {
         <ResumeCard
           isDefault={true}
           title="이력서 1"
+          jobGroup="개발"
           jobName="프론트엔드 개발자"
           date="2024.01.18"
           workType={workType}
