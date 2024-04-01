@@ -116,7 +116,6 @@
     display: flex;
     justify-content: space-between;
     width: 78.6rem;
-    margin-bottom: 8rem;
   }
   @include mobile {
     display: flex;
@@ -125,15 +124,34 @@
   }
 }
 
-/* NoticeItem button style */
-.ntc-btn {
+/* NoticeItem, ManagementItem button style */
+.inner-btn {
   @include btn;
   width: 100%;
+  &.light-gray {
+    color: $gray;
+    cursor: default;
+  }
   @include pc {
+    height: 6rem;
+    font-size: 2.4rem;
+  }
+  @include mobile {
+    height: 5rem;
+    font-size: 2rem;
+  }
+}
+
+/* The style of a button with width up to breakpoint */
+.longer-btn {
+  @include btn;
+  @include pc {
+    width: 78.6rem;
     height: 6rem;
     font-size: 2.8rem;
   }
   @include mobile {
+    width: 100%;
     height: 5rem;
     font-size: 2rem;
   }

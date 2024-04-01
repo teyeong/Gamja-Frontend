@@ -29,6 +29,11 @@ import SeniorTab from 'components/aboutuspage/SeniorTab';
 import CompanyTab from 'components/aboutuspage/CompanyTab';
 import NoticePage from 'pages/NoticePage';
 import SuggestionPage from 'pages/SuggestionPage';
+import SuggestionManagementPage from 'pages/SuggestionManagementPage';
+import SuggestionEditPage from 'pages/SuggestionEditPage';
+import SuggestionCancelPage from 'pages/SuggestionCancelPage';
+import SuggestionPaymentPage from 'pages/SuggestionPaymentPage';
+import SuggestionPaymentCompletePage from 'pages/SuggestionPaymentCompletePage';
 
 function App() {
   return (
@@ -69,8 +74,28 @@ function App() {
             </Route>
             <Route path="/notice" element={<NoticePage />} />
             <Route
-              path="/resume/suggest/:resumeId"
+              path="/suggestion/resume/:resumeId"
               element={<SuggestionPage />}
+            />
+            <Route
+              path="/suggestion/edit/:resumeId"
+              element={<SuggestionEditPage />}
+            />
+            <Route
+              path="/suggestion/management"
+              element={<SuggestionManagementPage />}
+            />
+            <Route
+              path="/suggestion/cancel/:resumeId"
+              element={<SuggestionCancelPage />}
+            />
+            <Route
+              path="/suggestion/payment/:resumeId"
+              element={<SuggestionPaymentPage />}
+            />
+            <Route
+              path="/suggestion/payment/complete"
+              element={<SuggestionPaymentCompletePage />}
             />
           </Routes>
         </Layout>
