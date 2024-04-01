@@ -1,9 +1,10 @@
-import notice from '../../../assets/icons/notice.svg';
-import hamburger from '../../../assets/icons/hamburger.svg';
 import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Hamburger from './Hamburger';
+import notice from '../../../assets/icons/notice.svg';
+import hamburger from '../../../assets/icons/hamburger.svg';
+import logo from '../../../assets/icons/logo.svg';
 
 const Header = () => {
   const isLogin = false;
@@ -15,6 +16,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header_logo" onClick={() => navigate('/')}>
+        <img src={logo} />
         다시
       </div>
       {isMobile ? (
